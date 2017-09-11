@@ -5,7 +5,7 @@
 [中文文档](http://nwjs.io)
 
 ## version
-- V0.6.0
+- v0.6.0
 
 ## 安装
 - 使用npm安装 - 推荐使用npm安装
