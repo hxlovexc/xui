@@ -1588,6 +1588,9 @@ h6 {
   .x-checkbox.x-checked > i:before {
     -webkit-animation: scale 0.3s ease forwards;
             animation: scale 0.3s ease forwards; }
+  .x-checkbox.x-checked > i:before {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
   .x-checkbox.x-disabled > i,
   .x-checkbox.x-disabled:hover .x-checkbox.x-disabled > i {
     background: #f3f7f9 !important;
@@ -2079,6 +2082,9 @@ h6 {
   .x-radio.x-checked > i:before {
     -webkit-animation: scale 0.3s ease forwards;
             animation: scale 0.3s ease forwards; }
+  .x-radio.x-checked > i:before {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
   .x-radio.x-disabled > i,
   .x-radio.x-disabled:hover .x-radio.x-disabled > i {
     background: #f3f7f9 !important;

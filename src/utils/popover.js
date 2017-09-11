@@ -41,7 +41,7 @@ export function computationsPosition (direction, el, boxEl) {
       break;
   }
   // 滚动值
-  left = left + document.body.scrollLeft;
-  top = top + document.body.scrollTop;
+  left = left + (document.body.scrollLeft || document.documentElement.scrollLeft);
+  top = top + (document.body.scrollTop || document.documentElement.scrollTop);
   return { left, top };
 }

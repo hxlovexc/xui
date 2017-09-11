@@ -68,7 +68,6 @@ let buildConfig = {
 };
 
 // 压缩
-console.log(process.env.argv);
 if (process.env.model === 'build') {
   buildConfig.output.filename = '[name].min.js'
   buildConfig.plugins.push(

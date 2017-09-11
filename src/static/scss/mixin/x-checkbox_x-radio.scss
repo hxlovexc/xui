@@ -21,10 +21,8 @@
 
   #{$name}{
     display: inline-block;
-    // vertical-align: middle;
     cursor: pointer;
     font-size: 0;
-    // overflow: hidden;
 
     & + #{$name}{
       margin-left: $checkbox-radio-margin-left;
@@ -70,6 +68,10 @@
       & > i{
         &:before{
           animation: scale 0.3s ease forwards;
+        }
+
+        &:before{
+          transform: scale(1);
         }
       }
     }
