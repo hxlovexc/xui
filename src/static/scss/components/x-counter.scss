@@ -1,0 +1,124 @@
+/*
+ * @Module: 计数器
+ * @Author: 小缘 
+ * @Date: 2017-05-20 23:35:00 
+ */
+// 变量
+@import '../variable.scss';
+
+.x-counter{
+  position: relative;
+  display: inline-block;
+  border: $counter-border-default;
+  vertical-align: middle;
+  transition: border $transition-time;
+
+  &:hover,
+  &:hover .x-counter-btn{
+    border-color: lighten($color-primary, $color-difference);
+  }
+
+  //输入框
+  .x-counter-input{
+    border: none;
+    padding: 0 10px;
+    background: none;
+    box-sizing: border-box;
+  }
+
+  //按钮
+  .x-counter-btn{
+    position: absolute;
+    top: 0;
+    z-index: 9;
+    height: 100%;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    font-size: inherit;
+    transition: color $transition-time;
+    cursor: pointer;
+    &:hover{
+      color: $x-counter-btn-color-hover-default;
+    }
+  }
+
+  //减少按钮
+  .x-counter-reduction{
+    left: 0;
+    border-right: 1px solid $x-counter-btn-color-default;
+  }
+
+  //增加按钮
+  .x-counter-add{
+    right: 0;
+    border-left: 1px solid $x-counter-btn-color-default;
+  }
+
+  .x-counter-btn,
+  .x-counter-input{
+    line-height: inherit;
+  }
+
+  //禁用
+  //按钮禁用
+  .x-min-disabled,
+  .x-max-disabled,
+  .x-min-disabled:hover,
+  .x-max-disabled:hover,
+  &.x-disabled .x-counter-btn,
+  &.x-disabled:hover .x-counter-btn{
+    color: $disabled-font-color;
+    cursor: no-drop;
+  }
+
+  //禁用
+  &.x-disabled {
+    background: $disabled-bg-color;
+  }
+
+  &.x-disabled,
+  &.x-disabled:hover .x-counter-btn{
+    border-color: $border-disabled-color;
+    cursor: no-drop;
+  }
+}
+
+//大小分类
+@each $item, $val in $counter-size{
+  .x-counter-#{$item}{
+    line-height: nth($val, 1) - 2px;
+    font-size: nth($val, 3);
+    .x-counter-input{
+      width: nth($val, 2);
+      height: nth($val, 1);
+      margin: 0 nth($val, 1);
+    }
+
+    .x-counter-btn{
+      width: nth($val, 1);
+    }
+  }
+}
+
+// 颜色分类
+@each $name, $val in $colors{
+  .x-counter-#{$name},
+  .x-counter-#{$name} .x-counter-btn{
+    border-color: $val;
+  }
+
+  .x-counter-#{$name}{
+    &:hover,
+    &:hover .x-counter-btn{
+      border-color: lighten($val, $color-difference);
+    }
+
+    //按钮
+    .x-counter-btn{
+      &:hover{
+        color: lighten($val, $color-difference);
+      }
+    }
+  }
+}

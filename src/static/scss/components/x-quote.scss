@@ -1,0 +1,28 @@
+/*
+ * @Module: 引用
+ * @Author: 小缘
+ * @Date: 2017-06-04 17:48:25
+ */
+// 变量
+@import '../variable.scss';
+
+.x-quote{
+  padding: $x-quote-padding;
+  margin-bottom: $x-quote-margin-bottom;
+  border: $x-quote-border;
+  border-left: $x-quote-left-border;
+
+  &.x-show-bg{
+    background: $x-quote-bg-default;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+  }
+}
+
+// 颜色分类
+@each $type, $color in $colors {
+  .x-quote-#{$type}{
+    border-color: $color;
+  }
+}

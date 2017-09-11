@@ -1,0 +1,140 @@
+/*
+  * @Module: 选项卡
+ * @Author: 小缘
+ * @Date: 2017-07-15 17:40:58
+ */
+// 变量
+@import '../variable.scss';
+
+.x-tabs-box{
+  background: #fff;
+
+  // 导航
+  .x-tabs-nav{
+    font-size: 0;
+    display: block;
+    border-bottom: 1px solid $x-tabs-border-color;
+
+    li{
+      font-size: $x-tabs-nav-font-size;
+      color: $x-tabs-nav-font-color;
+      display: inline-block;
+      vertical-align: middle;
+      height: $x-tabs-nav-height;
+      box-sizing: border-box;
+      line-height: $x-tabs-nav-height;
+      text-align: center;
+      padding: 0 $x-tabs-nav-padding;
+      cursor: pointer;
+
+      // 删除按钮
+      .x-tabs-remove-btn{
+        position: relative;
+        display: inline-block;
+        height: 100%;
+        width: $x-tabs-remove-icon-size;
+        vertical-align: middle;
+        padding-left: 5px;
+
+        // 关闭按钮
+        & > i{
+          width: $x-tabs-remove-icon-size;
+          height: $x-tabs-remove-icon-size;
+          line-height: 1;
+          font-size: $x-tabs-remove-icon-size;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          margin-top: -($x-tabs-remove-icon-size / 2) - 1;
+
+          &:hover{
+          }
+        }
+      }
+    }
+  }
+
+  // 内容
+  .x-tabs-content{
+    width: 100%;
+    padding: $x-tabs-nav-padding;
+  }
+}
+
+// 默认风格
+.x-tabs-default{
+  .x-tabs-nav{
+    position: relative;
+
+    li{
+      transition: color $x-tabs-animate-date, border $x-tabs-animate-date;
+
+      &:hover {
+        color: $x-tabs-default-nav-active-color;
+      }
+
+      // 激活状态
+      &.x-tabs-nav-active{
+        color: $x-tabs-default-nav-active-color;
+      }
+    }
+
+    .x-tabs-active-bar{
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      height: 2px;
+      background: $x-tabs-default-nav-active-color;
+      transition: width $x-tabs-animate-date, transform $x-tabs-animate-date;
+    }
+
+    // 禁用
+    .x-disabled,
+    .x-disabled:hover{
+      color: $x-tabs-disabled-font-color;
+    }
+  }
+}
+
+// 卡片风格
+.x-tabs-card{
+  border: 1px solid $x-tabs-border-color;
+
+  .x-tabs-nav{
+    background: $x-tabs-card-nav-bg;
+
+    // 激活状态
+    .x-tabs-nav-active{
+      position: relative;
+      background: $x-tabs-default-nav-active-bg;
+      
+      &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: $x-tabs-nav-height + 1;
+        box-sizing: border-box;
+        border: 1px solid $x-tabs-border-color;
+        border-top-color: $x-tabs-default-nav-active-bg;
+        border-bottom-color: $x-tabs-default-nav-active-bg;
+      }
+    }
+
+    li:first-child{
+      &::after{
+        border-left: none;
+      }
+    }
+
+    // 禁用
+
+
+    // 禁用
+    .x-disabled,
+    .x-disabled:hover{
+      color: $x-tabs-disabled-font-color;
+    }
+  }
+}

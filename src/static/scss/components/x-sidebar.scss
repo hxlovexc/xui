@@ -1,0 +1,65 @@
+/*
+  * @Module: 侧边栏
+ * @Author: 小缘
+ * @Date: 2017-07-29 10:16:28
+ */
+// 变量
+@import '../variable.scss';
+
+.x-sidebar{
+  .x-mask{
+    opacity: 0.6;
+  }
+
+  .x-sidebar-content{
+    position: fixed;
+    background-color: $x-sidebar-bg;
+    z-index: 2017;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    height: 100%;
+    top: 0;
+  }
+
+  // left
+  .x-sidebar-left{
+    left: 0;
+  }
+
+  // right
+  .x-sidebar-right{
+    right: 0;
+  }
+}
+
+// 过度动画
+.x-sidebar-animate-enter-active,
+.x-sidebar-animate-leave-active {
+  transition: opacity $x-sidebar-animate-date;
+
+  .x-mask{
+    transition: opacity $x-sidebar-animate-date;
+  }
+
+  .x-sidebar-content{
+    transition: transform $x-sidebar-animate-date $x-sidebar-animate-curve, opacity $x-sidebar-animate-date;
+  }
+}
+
+.x-sidebar-animate-enter .x-mask,
+.x-sidebar-animate-leave-to .x-mask
+.x-sidebar-animate-enter .x-sidebar-content,
+.x-sidebar-animate-leave-to .x-sidebar-content{
+  opacity: 0;
+}
+
+// left
+.x-sidebar-animate-enter .x-sidebar-left,
+.x-sidebar-animate-leave-to .x-sidebar-left{
+  transform: translateX(-100%);
+}
+
+// right
+.x-sidebar-animate-enter .x-sidebar-right,
+.x-sidebar-animate-leave-to .x-sidebar-right{
+  transform: translateX(100%);
+}

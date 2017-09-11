@@ -1,0 +1,79 @@
+/*
+ * @Module: 标签
+ * @Author: 小缘
+ * @Date: 2017-07-19 18:45:35
+ */
+// 变量
+@import '../variable.scss';
+
+.x-tag{
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  color: $x-tag-font-color;
+  box-sizing: border-box;
+  border: 1px solid;
+  line-height: 1;
+
+  &.x-radius {
+    border-radius: $x-tag-border-radius;
+  }
+
+  // 关闭按钮
+  .x-tag-icon{
+    display: inline-block;
+    border-radius: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    // transition: transform $transition-time;
+
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+
+  .x-tag-icon i,
+  span{
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  // 大小分类
+  @each $type, $size in $x-tag-size{
+    &.x-tag-#{$type}{
+      padding: nth($size, 1) nth($size, 2);
+      font-size: nth($size, 3);
+
+      .x-tag-icon{
+        $icon-size: nth($size, 3) + (nth($size, 3) / 5);
+        width: $icon-size;
+        height: $icon-size;
+      }
+    }
+  }
+
+  // 颜色分类
+  @each $type, $color in $colors{
+    &.x-tag-#{$type}{
+      background: $color;
+      border-color: $color;
+    }
+
+    // 空心
+    &.x-hollow.x-tag-#{$type}{
+      background: none;
+      color: $color;
+    }
+  }
+}
+
+// 过渡动画
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.2s;
+}
+
+.fade-enter,
+.fade-leave-to{
+  opacity: 0
+}

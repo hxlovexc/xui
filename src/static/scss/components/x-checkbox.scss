@@ -1,0 +1,31 @@
+/*
+ * @Module: 多选
+ * @Author: 小缘
+ * @Date: 2017-06-07 20:12:12
+ */
+// 变量
+@import '../variable.scss';
+// mixin
+@import '../mixin/x-checkbox_x-radio.scss';
+
+// 基础样式
+@include checkbox-radio('.x-checkbox');
+
+//checkbox
+.x-checkbox{
+  i{
+    border-radius: $x-checkbox-radius-default;
+  }
+
+  // 颜色分类
+  @each $type, $val in $colors{
+    &.x-checkbox-#{$type}{
+      // 选中
+      &.x-checked{
+        & > i{
+          background: $val;
+        }
+      }
+    }
+  }
+}

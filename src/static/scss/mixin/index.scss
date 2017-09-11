@@ -1,0 +1,23 @@
+/*
+ * @Module: mixin
+ * @Author: 小缘
+ * @Date: 2017-06-06 15:01:09
+ */
+// 变量
+@import '../variable.scss';
+
+// 禁用
+@mixin disabled ($name) {
+  #{$name}.x-disabled,
+  #{$name}.x-disabled:hover,
+  #{$name}.x-disabled:active,
+  #{$name}.x-disabled:focus,
+  #{$name}[disabled],
+  #{$name}[disabled]:hover,
+  #{$name}[disabled]:active,
+  #{$name}[disabled]:focus{
+    background: $disabled-bg-color;
+    border-color: $border-disabled-color;
+    color: $disabled-font-color;
+  }
+}

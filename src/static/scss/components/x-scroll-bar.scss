@@ -1,0 +1,42 @@
+/*
+  * @Module: 自定义滚动条
+ * @Author: 小缘
+ * @Date: 2017-06-24 23:54:09
+ */
+// 变量
+@import '../variable.scss';
+
+.x-scroll-bar{
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+
+  & > .x-scroll-bar-content{
+    overflow-y: scroll;
+    margin-right: -15px;
+    height: 100%;
+  }
+
+  .x-bar-box{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 6px;
+    border-radius: 4px;
+    height: 100%;
+    background: #fbfbfb;
+
+    .x-bar{
+      width: 100%;
+      height: 0;
+      background: #c2c2c2;
+      cursor: pointer;
+      border-radius: inherit;
+
+      &.x-bar-hover,
+      &:hover{
+        background: #7d7d7d;
+      }
+    }
+  }
+}

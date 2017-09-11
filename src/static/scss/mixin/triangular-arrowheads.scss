@@ -1,0 +1,128 @@
+/*
+  * @Module: 三槐
+ * @Author: 小缘
+ * @Date: 2017-09-08 23:16:36
+ */
+ @mixin triangular-arrowheads ($name, $border-color, $size, $bg) {
+  $spacing: $size + 5;
+
+  &#{$name}{
+    .arrow{
+      content: '';
+      display: inline-block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-color: transparent;
+      border-style: solid;
+      
+      @if $bg != '' {
+        &:after {
+          content: "";
+          border-width: $size;
+          position: absolute;
+          display: block;
+          width: 0;
+          height: 0;
+          border-color: transparent;
+          border-style: solid;
+        }
+      }
+    }
+  }
+  
+  // 方向
+  // top
+  &#{$name}-top{
+    padding-bottom: $spacing;
+
+    .arrow{
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -$spacing);
+      border-width: $size $size 0;
+      border-top-color: $border-color;
+
+      @if $bg != '' {
+        &:after {
+          bottom: 1px;
+          margin-left: -$size;
+          content: '';
+          border-top-color: #fff;
+          border-bottom-width: 0;
+        }
+      }
+    }
+  }
+
+  // bottom
+  &#{$name}-bottom{
+    padding-top: $spacing;
+    top: 0;
+    
+    .arrow{
+      top: 0;
+      left: 50%;
+      margin-top: $size;
+      margin-left: -$size;
+      border-width: 0 $size $size;
+      border-bottom-color: $border-color;
+      
+      @if $bg != '' {
+        &:after {
+          top: 1px;
+          margin-left: -$size;
+          content: " ";
+          border-top-width: 0;
+          border-bottom-color: #fff;
+        }
+      }
+    }
+  }
+  
+  // left
+  &#{$name}-left{
+    padding-right: $spacing;
+
+    .arrow{
+      top: 50%;
+      left: 100%;
+      transform: translate(-$spacing, -50%);
+      border-width: $size 0 $size $size;
+      border-left-color: $border-color;
+      
+      @if $bg != '' {
+        &:after {
+          right: 1px;
+          bottom: -$size;
+          content: " ";
+          border-right-width: 0;
+          border-left-color: #fff;
+        }
+      }
+    }
+  }
+  
+  // right
+  &#{$name}-right{
+    padding-left: $spacing;
+
+    .arrow{
+      top: 50%;
+      left: $spacing;
+      transform: translate(-100%, -50%);
+      border-width: $size $size $size 0;
+      border-right-color: $border-color;
+      
+      @if $bg != '' {
+        &:after {
+          bottom: -$size;
+          left: 1px;
+          content: " ";
+          border-right-color: #fff;
+          border-left-width: 0;
+        }
+      }
+    }
+  }
+ }

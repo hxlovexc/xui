@@ -1,0 +1,90 @@
+/*
+ * @Module: 滑块
+ * @Author: 小缘
+ * @Date: 2017-07-13 12:11:43
+ */
+
+// 变量
+@import '../variable.scss';
+
+.x-slider-box{
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  height: $x-slider-height;
+  margin: 4px 0;
+  position: relative;
+  background: $x-slider-bg;
+
+  .x-slider-bar{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: $x-slider-height;
+  }
+
+  // 进度条手柄
+  .x-slider-handle{
+    $size: $x-slider-height * 3;
+
+    width: $size;
+    height: $size;
+    border-radius: 100%;
+    position: absolute;
+    top: -($size - $x-slider-height) / 2;
+    left: 0;
+    margin-left: -$size / 2;
+    transition: transform $transition-time;
+    box-sizing: border-box;
+    cursor: pointer;
+    z-index: 9;
+    background: #fff;
+
+    &:hover,
+    &:active{
+      cursor: pointer;
+    }
+
+    &:hover .x-tooltip,
+    &:active .x-tooltip{
+      display: inline-block;
+    }
+  }
+  
+  // 禁用
+  &.x-disabled,
+  &.x-disabled .x-slider-handle,
+  &.x-disabled .x-slider-bar{
+      background: $x-slider-disabled-bg-color;
+    }
+  &.x-disabled .x-slider-handle{
+    border-color: $x-slider-disabled-border-color;
+    cursor: no-drop;
+  }
+
+  // tip
+  .x-tooltip{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -100%);
+    display: none;
+
+    .x-tooltip-text {
+      padding: 3px 10px;
+    }
+  }
+}
+
+// 颜色分类
+@each $type, $color in $colors{
+  .x-slider-#{$type}{
+    .x-slider-bar{
+      background: $color;
+    }
+
+    .x-slider-handle{
+      border: 2px solid $color;
+    }
+  }
+}

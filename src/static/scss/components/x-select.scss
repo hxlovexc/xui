@@ -1,0 +1,239 @@
+/*
+  * @Module: 下拉选择
+ * @Author: 小缘
+ * @Date: 2017-06-19 23:12:35
+ */
+// 变量
+@import '../variable.scss';
+
+.x-select{
+  width: $x-select-width;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+
+  .x-select-head{
+    width: 100%;
+    height: $x-select-height;
+    font-size: $font-size-default;
+    cursor: pointer;
+    background: $x-select-background-color;
+    box-sizing: border-box;
+    padding: 0;
+    line-height: 1;
+    position: relative;
+    z-index: 1;
+    transition: border $transition-time, color $transition-time, background $transition-time;
+
+    &::before{
+      content: '';
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 999;
+    }
+
+    .x-select-input{
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      border: none;
+      cursor: pointer;
+      display: block;
+      text-align: left;
+      border: $x-select-border;
+      padding-left: $x-select-head-left;
+      padding-right: $x-select-head-right;
+      overflow: hidden;
+      white-space: nowrap;
+      color: $x-select-font-color;
+    }
+
+    // 图标
+    & > i{
+      position: absolute;
+      top: ($x-select-height - 2 - $x-select-icon-size) / 2;
+      right: ($x-select-head-right - $x-select-icon-size / 2) / 2;
+      font-size: $x-select-icon-size;
+      color: $x-select-placeholder-color;
+      transition: transform $x-select-icon-transition;
+      z-index: 1;
+    }
+
+    // 圆角
+    &.x-radius{
+      border-radius: $x-select-radius;
+    }
+  }
+  
+  // 打开
+  &.x-select-open .x-select-head > i{
+    transform: rotate(180deg);
+  }
+
+  // 分组
+  .x-select-group{
+    .x-group-label{
+      display: block;
+      font-size: $x-select-label-font-size;
+      color: $x-select-label-font-color;
+      line-height: $x-select-height - 4;
+      box-sizing: border-box;
+      padding-left: $x-select-head-left;
+    }
+
+    li{
+      padding-left: $x-select-head-left * 2!important;
+    }
+  }
+
+  // 下拉菜单
+  .x-dropdown-menu{
+    // 间距
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-sizing: border-box;
+    min-width: 100%;
+    border: $x-select-border;
+    box-shadow: 0 3px 12px rgba(0,0,0,.05);
+    margin-top: $x-select-option-top;
+    padding: $x-select-options-padding 0;
+    border-color: $x-select-border-color;
+    z-index: 99;
+    background: $x-select-background-color;
+
+    ul{
+      max-height: $x-select-option-height;
+      overflow-y: auto;
+      box-sizing: border-box;
+
+      li{
+        position: relative;
+        padding: 0 $x-select-head-left - $x-select-options-padding;
+        margin: 0 $x-select-options-padding;
+        line-height: $x-select-height - 2;
+        cursor: pointer;
+        white-space: nowrap;
+        color: $x-select-option-font-color;
+
+        & > span{
+          display: inline-block;
+          padding-right: $x-select-selected-icon-size + 8;
+          line-height: 1;
+          vertical-align: middle;
+        }
+
+        // 选中钩子
+        & > .x-icon-done{
+          position: absolute;
+          top: 50%;
+          right: $x-select-head-left;
+          font-size: $x-select-selected-icon-size;
+          margin-top: -($x-select-selected-icon-size / 2) + 0.5;
+          line-height: 1;
+        }
+
+        &.x-select-option-hover{
+          background: $x-select-option-hover;
+        }
+
+        // 禁用
+        &.x-disabled{
+          color: $x-options-disabled-color;
+
+          &:hover{
+            background: none;
+          }
+        }
+      }
+    }
+
+    // 加载提示
+    .x-select-load-msg{
+      font-size: $load-msg-font-size;
+      color: $load-msg-font-color;
+      text-align: center;
+      padding: 8px 0;
+    }
+
+   // 圆角
+   &.x-radius,
+   .x-dropdown-menu li{
+     border-radius: $x-select-radius;
+   }
+
+   // 输入框
+   .x-select-input{
+     padding: 4px $x-select-head-left;
+
+     input{
+       height: 30px;
+     }
+   }
+  }
+}
+
+// 类型
+// 默认
+.x-select-default{
+  .x-select-head{
+    .x-select-input{
+      border-color: $x-select-border-color;
+      color: $x-select-font-color;
+    }
+  }
+}
+
+@each $type, $val in $colors{
+  .x-select-#{$type}{
+    .x-select-head{
+      .x-select-input,
+      i{
+        color: $val;
+      }
+
+      .x-select-input{
+        border-color: $val;
+      }
+    }
+
+    .x-dropdown-menu > ul li{
+      & > .x-icon-done,
+      &.x-select-selected{
+        color: $val;
+      }
+    }
+  }
+}
+
+// 禁用
+.x-select{
+  .x-select-input{
+    &.x-disabled{
+      color: $x-select-disabled-font-color;
+      background: $x-select-disabled-head-bg;
+    }
+
+    &.x-disabled,
+    &.x-disabled:hover,
+    &.x-disabled:focus{
+      border-color: $x-select-disabled-border-color;
+    }
+  }
+}
+
+// 显示动画
+.fade-enter-active,
+.fade-leave-active{
+  transition: opacity $transition-time, transform $transition-time;
+}
+
+.fade-enter,
+.fade-leave-to{
+  transform: translate3d(0, 15px, 0);
+  opacity: 0.3;
+}

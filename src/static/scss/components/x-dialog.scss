@@ -1,0 +1,77 @@
+/*
+ * @Module: dialog对话框
+ * @Author: 小缘
+ * @Date: 2017-07-21 12:10:54
+ */
+// 变量
+@import '../variable.scss';
+@import '../mixin/x-dialog_x-modal.scss';
+
+// 基础样式
+@include modal-commom('x-dialog');
+
+.x-dialog-box{
+  &:before{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  .x-dialog{
+    vertical-align: middle;
+    min-width: $x-dialog-min-width;
+    max-width: $-xdialog-max-width;
+  }
+
+  .x-dialog-content{
+    @each $type, $val in $x-dialog-types{
+      .x-dialog-#{$type} > i{
+        color: $val;
+      }
+    }
+
+    & > div{
+      position: relative;
+    }
+  }
+
+  // 显示图标
+  .x-dialog-show-icon{
+    & > i{
+      font-size: $x-dialog-icon-size;
+      transform: translateY(-50%);
+      position: absolute;
+      left: 0;
+      top: 50%;
+      line-height: 1
+    }
+
+    & > span{
+      display: block;
+      padding-left: $x-dialog-icon-size + 6;
+    }
+  }
+}
+
+// 过度动画
+.bounce-enter-active,
+.bounce-leave-active{
+  transition: opacity $x-dialog-show-animate-date;
+
+  .x-dialog{
+    transition: opacity $x-dialog-show-animate-date, all $x-dialog-show-animate-date;
+  }
+}
+
+.bounce-enter .x-dialog,
+.bounce-leave-to .x-dialog,
+.bounce-enter .x-mask,
+.bounce-leave-to .x-mask{
+  opacity: 0;
+}
+
+.bounce-enter .x-dialog,
+.bounce-leave-to .x-dialog{
+  transform: scale(0);
+}

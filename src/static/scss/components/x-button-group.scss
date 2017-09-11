@@ -1,0 +1,48 @@
+/*
+ * @Module: 按钮组
+ * @Author: 小缘
+ * @Date: 2017-06-05 23:17:09
+ */
+// 变量
+@import '../variable.scss';
+
+.x-button-group{
+  display: inline-block;
+  
+  .x-button{
+    float: left;
+    
+    & + .x-button{
+      margin-left: -1px;
+    }
+
+    &:hover{
+      z-index: 1;
+    }
+  }
+
+  // 大小
+  @each $name, $val in $button-size{
+    &.x-button-group-#{$name}{
+      .x-button{
+        padding: 0 nth($val, 1);
+        height: nth($val, 2);
+        font-size: nth($val, 3);
+      }
+    }
+  }
+
+  &.x-radius{
+    .x-button{
+      &:first-child{
+        border-top-left-radius: $radius-default;
+        border-bottom-left-radius: $radius-default;
+      }
+
+      &:last-child{
+        border-top-right-radius: $radius-default;
+        border-bottom-right-radius: $radius-default;
+      }
+    }
+  }
+}

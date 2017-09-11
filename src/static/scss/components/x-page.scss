@@ -1,0 +1,152 @@
+/*
+  * @Module: 分页
+ * @Author: 小缘
+ * @Date: 2017-08-06 01:31:41
+ */
+// 变量
+@import '../variable.scss';
+
+.x-page{
+  display: inline-block;
+  font-size: 0;
+  vertical-align: middle;
+
+  .x-page-list-box,
+  ul{
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  ul{
+    li{
+      display: inline-block;
+      font-size: 14px;
+      box-sizing: border-box;
+      line-height: 1;
+      vertical-align: middle;
+      background-color: transparent;
+      cursor: pointer;
+      position: relative;
+
+      &:hover{
+        color: $x-page-button-hover-color;
+        background-color: $x-page-button-hover-bg;
+      }
+
+      // 激活
+      &.x-page-active{
+        z-index: 9;
+        color: $x-page-button-active-font-color;
+        background: $x-page-button-active-color;
+        border-color: $x-page-button-active-color;
+      }
+    }
+
+    // 禁用状态
+    .x-page-disabled,
+    .x-page-disabled:hover{
+      color: $x-page-disabled-font-color;
+    }
+
+    .x-page-disabled:hover{
+      background-color: transparent;
+      cursor: not-allowed;
+    }
+  }
+
+  ul,
+  .x-page-input{
+    color: $x-page-font-color;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .x-page-input{
+    padding: 0 10px;
+
+    input{
+      padding: 0 4px;
+      margin: 0 6px;
+      box-sizing: border-box;
+      border: $x-page-button-border;
+      text-align: center;
+    }
+  }
+
+  // 大小分类
+  @each $type, $value in $x-page-size{
+    &.x-page-#{$type}{
+      li{
+        padding: 0 nth($value, 2);
+      }
+
+      li,
+      .x-page-input{
+        height: nth($value, 1);
+        line-height: nth($value, 1);
+      }
+
+      li,
+      .x-page-input > input,
+      .x-page-input > span{
+        font-size: nth($value, 3);
+      }
+
+      .x-page-input{
+        input{
+          width: nth($value, 1) * 1.3;
+          height: nth($value, 1);
+        }
+      }
+    }
+  }
+
+  // 边框
+  &.x-page-border{
+    li{
+      border: $x-page-button-border;
+      margin-left: -1px;
+    }
+
+    ul:first-child li:first-child{
+      margin-left: 0;
+    }
+  }
+
+  // 圆角
+  &.x-page-radius{
+    ul:first-child li{
+      &:first-child{
+        border-top-left-radius: $x-page-radius;
+        border-bottom-left-radius: $x-page-radius;
+      }
+    }
+
+    ul:last-child li{
+      &:last-child{
+        border-top-right-radius: $x-page-radius;
+        border-bottom-right-radius: $x-page-radius;
+      }
+    }
+
+    .x-page-input{
+      input{
+        border-radius: $x-page-radius;
+      }
+    }
+  }
+
+  // 间隙
+  &.x-page-clearance{
+    li{
+      margin: 0 $x-page-button-clearance;
+    }
+
+    &.x-page-radius{
+      li{
+        border-radius: $x-page-radius;
+        overflow: hidden;
+      }
+    }
+  }
+}

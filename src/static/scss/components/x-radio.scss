@@ -1,0 +1,62 @@
+/*
+ * @Module: 单选
+ * @Author: 小缘
+ * @Date: 2017-06-08 22:22:19
+ */
+// 变量
+@import '../variable.scss';
+// mixin
+@import '../mixin/x-checkbox_x-radio.scss';
+
+// 基础样式
+@include checkbox-radio('.x-radio');
+
+// radio
+.x-radio{
+  i{
+    border-radius: 100%;
+  }
+
+  // 选中
+  &.x-checked{
+    $width: $checkbox-radio-width - 10;
+    & > i{
+      &:before{
+        content: '';
+        width: $width;
+        height: $width;
+        border-radius: 100%;
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-top: -$width / 2;
+        margin-left: -$width / 2;
+      }
+    }
+  }
+
+  // 禁用
+  &.x-disabled{
+    // 选中状态
+    &.x-checked{
+      & > i:before{
+        background: $x-checkbox-disabled-color!important;
+      }
+    }
+  }
+
+  // 颜色分类
+  @each $type, $val in $colors{
+    &.x-radio-#{$type}{
+      // 选中
+      &.x-checked{
+        & > i{
+          &:before{
+            background: $val;
+          }
+        }
+      }
+    }
+  }
+}

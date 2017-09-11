@@ -1,0 +1,26 @@
+$color-default: #f3f7f9;
+//主要
+$color-primary: #4399ff;
+//成功
+$color-success: #46be8a;
+//警告
+$color-warning: #f2a654;
+//危险
+$color-danger: #f96868;
+//暗色
+$color-dark: #667180;
+// 颜色集合
+$colors: (
+  primary: $color-primary,
+  success: $color-success,
+  warning: $color-warning,
+  danger: $color-danger,
+  dark: $color-dark
+);
+
+@each $type, $color in $colors{
+  .#{$type}{
+    color: $color;
+    transition: all 3s;
+  }
+}

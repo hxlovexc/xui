@@ -1,0 +1,22 @@
+{
+  "presets": [
+    [
+      "es2015",
+      [
+        "env",
+        {
+          "loose": true,
+          "modules": false
+        },
+        {
+          "targets": {
+            "browsers": ["last 2 versions", "ie >= 9"]
+          }
+        }
+      ]
+    ],
+    "stage-0"
+  ],
+  "plugins": ["transform-runtime", "transform-vue-jsx"],
+  "comments": false
+}

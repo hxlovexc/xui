@@ -1,0 +1,76 @@
+/*
+ * @Module: 共用样式
+ * @Author: 小缘
+ * @Date: 2017-06-04 15:05:01
+ */
+
+// 圆角
+.x-radius{
+  border-radius: $radius-default;
+}
+
+/* 浮动 */
+// 左浮动
+.x-float-l{
+  float: left;
+}
+
+// 右浮动
+.x-float-r{
+  float: right;
+}
+
+// 清除浮动
+.x-clear-float{
+  clear: both;
+  *zoom: 1;
+}
+
+.x-clear-float:after{
+  content: '';
+  clear: both;
+  *zoom: 1;
+  display: block;
+}
+
+//将标签设置成块级元素
+.x-inline{
+  display: inline-block;
+}
+
+//将元素设置成 & 显示元素
+.x-block,
+.x-show{
+  display: block!important;
+}
+
+//隐藏元素
+.x-hide{
+  display: none!important;;
+}
+
+//禁止选择
+.x-unselect{
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+//禁用
+.x-disabled,
+[disabled]{
+  cursor: no-drop!important;
+  user-select: none!important;
+}
+
+// 遮罩
+.x-mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.3);
+  z-index: 1;
+}

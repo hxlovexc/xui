@@ -1,0 +1,116 @@
+/*
+  * @Module: 开关
+ * @Author: 小缘
+ * @Date: 2017-06-19 23:12:35
+ */
+// 变量
+@import '../variable.scss';
+
+.x-switch{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  background: #fff;
+  border: 1px solid $x-switch-border-color;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: background $x-switch-animate-date, border-color $x-switch-animate-date;
+
+  & + .x-switch{
+    margin-left: 15px;
+  }
+
+  i{
+    position: absolute;
+    border-radius: 20px;
+    left: $x-switch-padding;
+    background: $x-switch-icon-color;
+    transition: background $x-switch-animate-date, transform $x-switch-animate-date, width $x-switch-animate-date;
+  }
+
+  .x-switch-label{
+    display: block;
+    color: $x-switch-icon-color;
+    padding-right: $x-switch-padding;
+    transition: color $x-switch-animate-date;
+    text-align: center;
+  }
+
+  i,
+  .x-switch-label{
+    vertical-align: middle;
+  }
+
+  // 禁用
+  &.x-disabled{
+    background: $disabled-bg-color!important;
+    border-color: $x-switch-disabled-border-color!important;
+
+    i{
+      opacity: 0.7!important;
+      background: $x-switch-icon-color!important;
+    }
+    
+    .x-switch-label{
+      color: $x-switch-font-color!important;
+    }
+  }
+}
+
+// 大小分类
+@each $type, $val in $x-switch-size{
+  .x-switch-#{$type}{
+    $icon-size: nth($val, 2) - ($x-switch-padding * 2);
+    $label-left: $icon-size + ($x-switch-padding * 2);
+
+    width: nth($val, 1);
+    height: nth($val, 2);
+
+    i{
+      top: (nth($val, 2) - $icon-size - 2) / 2;
+      width: $icon-size;
+      height: $icon-size;
+    }
+
+    .x-switch-label{
+      line-height: nth($val, 2) - 2;
+      font-size: nth($val, 3);
+      padding-left: $label-left;
+    }
+
+    // 打开
+    &.x-switch-open{
+      i{
+        transform: translateX(nth($val, 1) - $icon-size - ($x-switch-padding * 2) - 2);
+        background: #fff;
+      }
+
+      .x-switch-label{
+        padding-left: $x-switch-padding;
+        padding-right: $label-left;
+        color: #fff;
+      }
+
+      // 颜色分类
+      @each $type, $color in $colors{
+        &.x-switch-#{$type}{
+          background: $color;
+          border-color: $color;
+        }
+      }
+
+      // 鼠标按下
+      &:active i{
+        transform: translateX(nth($val, 1) - $icon-size - ($x-switch-padding * 2) - 2 - 8);
+      }
+    }
+
+    // 鼠标按下
+    &:active i{
+      width: $icon-size + 8px;
+    }
+  }
+}

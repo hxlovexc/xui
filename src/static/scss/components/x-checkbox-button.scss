@@ -1,0 +1,9 @@
+/*
+  * @Module: 多选-按钮组
+ * @Author: mikey.zhaopeng 
+ * @Date: 2017-06-11 23:03:27 
+ */
+@import '../mixin/x-checkbox-group_x-radio-group.scss';
+
+// 基础样式
+@include checkbox_radop-button('.x-checkbox');

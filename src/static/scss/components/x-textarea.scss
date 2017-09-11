@@ -1,0 +1,55 @@
+/*
+ * @Module: textarea
+ * @Author: 小缘
+ * @Date: 2017-06-06 19:10:07
+ */
+// 变量
+@import '../variable.scss';
+// 公用
+@import '../mixin/index.scss';
+@import '../mixin/input-box.scss';
+
+// 基础样式
+@include text-box('.x-textarea');
+
+.x-textarea{
+  padding: $x-textarea-padding;
+}
+
+// 大小
+@each $name, $val in $x-textarea-size{
+  .x-textarea-#{$name}{
+    .x-textarea{
+      font-size: nth($val, 2);
+      height: nth($val, 1);
+    }
+  }
+}
+
+// 颜色类型
+@each $name, $val in $colors{
+  .x-textarea-#{$name}{
+    .x-textarea{
+      border-color: $val;
+
+      &:hover{
+        border-color: lighten($val, $color-difference);
+      }
+
+      &:focus{
+        border-color: darken($val, $color-difference);
+      }
+    }
+  }
+}
+
+// 禁用
+@include disabled('.x-textarea');
+
+// inline
+.x-inline{
+  .x-textarea{
+    display: inline-block;
+    width: $x-textarea-inline-width;
+  }
+}

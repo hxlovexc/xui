@@ -1,0 +1,613 @@
+/* base */
+// 字体
+$font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,"Microsoft Yahei","Hiragino Sans GB","WenQuanYi Micro Hei",sans-serif;
+
+// 默认字体大小
+$font-size-large: 16px;
+$font-size-default: 14px;
+$font-size-small: 13px;
+$font-size-mini: 12px;
+
+// 行高
+$line-height-default: 1.5;
+// 圆角
+$radius-default: 4px;
+
+// 默认高度
+$size-large: 40px;
+$size-default: 34px;
+$size-small: 30px;
+$size-mini: 22px;
+
+// 左右padding  用于组件不同大小比如按钮 多选和单选组
+$about-spacing-large: 16px;
+$about-spacing-default: 13px;
+$about-spacing-small: 7px;
+$about-spacing-mini: 3px;
+
+/* 颜色 */
+/* 颜色分类 */
+$color-default: #f3f7f9;
+//主要
+$color-primary: #4399ff;
+//成功
+$color-success: #46be8a;
+//警告
+$color-warning: #f2a654;
+//危险
+$color-danger: #f96868;
+//暗色
+$color-dark: #667180;
+// 颜色集合
+$colors: (
+  primary: $color-primary,
+  success: $color-success,
+  warning: $color-warning,
+  danger: $color-danger,
+  dark: $color-dark
+);
+// 标题颜色
+$title-color: #37474f;
+//字体颜色
+$font-color-default: #3f536e; //#495060;
+// 辅助颜色
+$font-color-auxiliary: #526069;
+//禁用字体颜色
+$disabled-font-color: #a3afb7;
+// 背景
+$bg-color-default: #f5f5f5; // #e2e2e2;
+$bg-color-default-hover: #f3f7f9;
+// 禁用背景色
+$disabled-bg-color: #f3f7f9;
+// 颜色计算值
+$color-difference: 8.5%;
+
+// 边框
+$border-color-default: #e2e2e2; // #E4EAEC;
+//禁用边框颜色
+$border-disabled-color: #E4EAEC;
+
+// 链接颜色
+$link-color: $color-primary;
+// 链接-hover
+$link-hover: lighten($color-primary, 10%);
+// 链接-active
+$link-active: darken($color-primary, 10%);
+
+/* 动画过渡 */
+$transition-time: 0.3s;
+$transition-time-5: 0.5s;
+$transition-time-8: 0.8s;
+
+/* 组件和模块 */
+/* 字体 */
+// small字体大小
+$small-size-1: 65%;
+$small-size-2: 75%;
+// 下边距
+$h-tag-bottom: 12px;
+// 上边距
+$h-tag-top-1: 11px;
+$h-tag-top-2: 22px;
+// (字体大小，，small字体大小，下边距，上边距)
+$h: (
+  h1: (36px, $small-size-1, $h-tag-bottom, 0),
+  h2: (30px, $small-size-1, $h-tag-bottom, $h-tag-top-2),
+  h3: (24px, $small-size-1, $h-tag-bottom, $h-tag-top-2),
+  h4: (18px, $small-size-2, $h-tag-bottom, $h-tag-top-1),
+  h5: (14px, $small-size-2, $h-tag-bottom, $h-tag-top-1),
+  h6: (12px, $small-size-2, $h-tag-bottom, $h-tag-top-1)
+);
+
+/* x-quote */
+// 背景
+$x-quote-bg-default: $bg-color-default;
+// 间距
+$x-quote-padding: 15px;
+// 边框
+$x-quote-border: 1px solid;
+// 左边框
+$x-quote-left-border: 5px solid;
+// 下边距
+$x-quote-margin-bottom: 10px;
+
+/* 按钮 */
+// (左右padding, 高度, 字体大小)
+$button-size: (
+  large: ($about-spacing-large, $size-large, $font-size-large),
+  default: ($about-spacing-default, $size-default, $font-size-default),
+  small: ($about-spacing-small, $size-small, $font-size-default),
+  mini: ($about-spacing-mini, $size-mini, $font-size-mini)
+);
+// 默认字体大小
+$button-font-size-default: $font-size-default;
+// 默认边框
+$button-border-default: 1px solid;
+// 禁用边框色
+$button-disabled-border-color: $border-disabled-color;
+// 边框
+$button-border-default-default: $border-color-default;
+$button-border-default-hover: $border-color-default;
+$button-border-default-active: darken($bg-color-default, 5%);
+// 默认背景
+$button-bg-default: #fff;
+$button-bg-default-hover: $bg-color-default;
+$button-bg-default-active:darken($bg-color-default, 5%);
+// 字体
+$button-color-default-hover: $font-color-default;
+$button-color-default-active: $font-color-default;
+// 禁用背景
+$button-disabled-bg-color: $disabled-bg-color;
+// 按钮禁用字体颜色
+$button-disabled-font-color: #a3afb7;
+
+/* input */
+$input-size: (
+  large: ($size-large, $font-size-large),
+  default: ($size-default, $font-size-default),
+  small: ($size-small, 13px)
+  // mini: ($size-mini, 12px)
+);
+// 默认圆角
+$input-radius-default: $radius-default;
+// 间距
+$input-padding: 0 10px;
+// 行内input宽度
+$input-inline-width: 200px;
+// 边框
+$input-border-default: 1px solid $border-color-default;
+// 边框 hover
+$input-border-default-hover: lighten($color-primary, $color-difference);
+$input-border-default-active: darken($color-primary, $color-difference);
+
+/* x-input-group */
+// 背景
+$x-input-group-bg-default: $bg-color-default;
+// input左右元素的padding-left 和padding-right
+$x-input-group-padding: 6px;
+
+/* textarea */
+$x-textarea-size: (
+  large: (88px, $font-size-default),
+  default: (69px, $font-size-default),
+  small: (43px, 12px)
+);
+// 间距
+$x-textarea-padding: 6px 10px;
+// 行内input宽度
+$x-textarea-inline-width: 420px;
+
+/* 计数器 */
+$counter-size: (
+  large: ($size-large 120px $font-size-large),
+  default: ($size-default 100px $font-size-default),
+  small: ($size-small 80px $font-size-small)
+);
+// 边框
+$counter-border-default: 1px solid $border-color-default;
+// 按钮hover 默认字体颜色
+$x-counter-btn-color-hover-default: lighten($color-primary, $color-difference);
+// 按钮默认颜色
+$x-counter-btn-color-default:  $border-color-default;
+
+/* checkbox和radio */
+$checkbox-radio-width: 20px;
+// 两个组件之间的距离
+$checkbox-radio-margin-left: 15px;
+// 边框
+$x-checkbox-border-default: 1px solid $border-color-default;
+// 字体颜色
+$x-checkbox-color-default: $font-color-auxiliary;
+// 圆角
+$x-checkbox-radius-default: $radius-default;
+// 禁用图标颜色
+$x-checkbox-disabled-color: $disabled-font-color;
+// 禁用背景色
+$x-checkbox-disabled-bg-color: $disabled-bg-color;
+// 禁用边框色
+$x-checkbox-disabled-border-color: $border-disabled-color;
+// label字体大小
+$checkbox-radio-label-font-size: 14px;
+// 左边距
+$checkbox-radio-label-margin-left: 8px;
+
+/* 多选和单选按钮组 */
+$checkbox_radio-size: (
+  large: ($about-spacing-large, $size-large, $font-size-large),
+  default: ($about-spacing-default, $size-default, $font-size-default),
+  small: ($about-spacing-small, $size-small, $font-size-default),
+  mini: ($about-spacing-mini, $size-mini, $font-size-mini)
+);
+// 按钮默认圆角
+$x-checkbox_x-radio-radius-default: $radius-default;
+// 禁用边框色
+$x-checkbox_x-radio-disabled-border-color: $x-checkbox-disabled-border-color;
+// 禁用背景
+$x-checkbox_x-radio-disabled-bg: $disabled-bg-color;
+// 禁用字体颜色
+$x-checkbox_x-radio-disabled-color: $disabled-font-color;
+
+/* 下拉选择 */
+// 默认宽度
+$x-select-width: 206px;
+// 默认高度
+$x-select-height: $size-default;
+// 字体大小
+$x-select-font-size: $font-size-default;
+// 字体颜色
+$x-select-font-color: $title-color;
+// 分组label字体颜色
+$x-select-label-font-color: #76838f;
+// option字体颜色
+$x-select-option-font-color: $title-color;
+// label字体大小
+$x-select-label-font-size: 14px;
+// placeholder字体颜色
+$x-select-placeholder-color: #a3afb7;
+// 加载提示
+$load-msg-font-size: 14px;
+// 加载提示字体颜色
+$load-msg-font-color: $x-select-placeholder-color;
+// 默认背景
+$x-select-background-color: #fff;
+$x-select-border: 1px solid;
+// 边框颜色
+$x-select-border-color: $border-color-default;
+// hover颜色
+$x-select-hover-color: $color-primary;
+// option hover背景色
+$x-select-option-hover: $bg-color-default-hover;
+// 默认选中背景色
+$x-select-selected-default-bg: $bg-color-default-hover;
+// head左右艰巨
+$x-select-head-left: 8px;
+$x-select-head-right: 28px;
+// head图标大小
+$x-select-icon-size: 18px;
+// options列表padding间距
+$x-select-options-padding: 2px;
+// 选中图标大小
+$x-select-selected-icon-size: 18px;
+// options上下间距
+$x-select-option-top: 4px;
+// options高度
+$x-select-option-height: 160px;
+// 圆角
+$x-select-radius: 3px;
+// 禁用
+$x-select-disabled-font-color: $disabled-font-color;
+// 禁用边框色
+$x-select-disabled-border-color: $border-disabled-color;
+// 禁用head背景
+$x-select-disabled-head-bg: $disabled-bg-color;
+// x-option禁用
+$x-options-disabled-color: #bfcbd9;
+// 过度动画
+$x-select-icon-transition: 0.3s;
+
+/* 开关 */
+// 边框颜色
+$x-switch-border-color: $border-color-default;
+// 图标颜色
+$x-switch-icon-color: #d2d2d2;
+// 左右padding
+$x-switch-padding: 3px;
+// 过度动画时间
+$x-switch-animate-date: 0.25s ease-in-out;
+// 禁用背景颜色
+$x-switch-disabled-bg-color: $disabled-bg-color;
+// 禁用边框色
+$x-switch-disabled-border-color: $border-disabled-color;
+// 禁用字体颜色
+$x-switch-font-color: $disabled-font-color;
+// 大小(宽度-高度-字体大小)
+$x-switch-size: (
+  large: (65px, 30px, 14px),
+  default: (56px, 24px, 12px),
+  small: (40px, 20px, 12px)
+);
+
+/* 滑块 */
+// 默认背景
+$x-slider-bg: $bg-color-default;
+// 高度
+$x-slider-height: 4px;
+// 移动动画时间
+$x-slider-animate-date: 0.08s;
+// 禁用背景
+$x-slider-disabled-bg-color: $x-slider-bg;
+// 禁用边框色
+$x-slider-disabled-border-color: #cccccc;
+
+/* 表单 */
+// item高度
+$x-form-item-height: $size-default;
+// label宽度
+$x-form-label-width: 110px;
+// label字体大小
+$x-form-label-font-size: 14px;
+// label字体颜色
+$x-form-label-font-color: $font-color-default;
+// label padding
+$x-form-label-right-padding: 12px;
+// 信息提示字体大小
+$x-form-msg-font-size: 12px;
+// 信息提示padding-top
+$x-form-msg-padding-top: 6px;
+// 方块风格label背景色
+$x-form-pane-label-bg: $bg-color-default;
+// 方块边框颜色
+$x-form-pane-border-color: $border-color-default;
+
+/* 选项卡 */
+// 边框颜色
+$x-tabs-border-color: $border-color-default;
+// 选项卡高度
+$x-tabs-nav-height: 40px;
+// 选项卡导航
+$x-tabs-nav-font-size: $font-size-default;
+// 字体颜色
+$x-tabs-nav-font-color: $font-color-default;
+// 导航左右padding
+$x-tabs-nav-padding: 12px;
+// 动画过渡时间
+$x-tabs-animate-date: $transition-time;
+$x-tabs-remove-icon-size: 18px;
+// 禁用字体颜色
+$x-tabs-disabled-font-color: $disabled-font-color;
+// 禁用背景颜色
+$x-tabs-disabled-bg: $disabled-bg-color;
+
+// 风格分类
+// 默认风格
+// nav hover背景
+$x-tabs-default-nav-hover-bg: #f3f7f9;
+// 选中状态
+$x-tabs-default-nav-active-color: $color-primary;
+
+// 卡片风格
+$x-tabs-card-nav-bg: $bg-color-default;
+// 选中状态
+$x-tabs-default-nav-active-bg: #fff;
+
+/* 折叠面板 */
+$x-collapse-border: 1px solid $border-color-default;
+// item padding
+$x-collapse-padding: 15px;
+// header高度
+$x-collapse-header-height: 40px;
+// header图标大小
+$x-collapse-header-icon-size: 18px;
+// header背景
+$x-collapse-heaer-bg: $bg-color-default;
+// 选中过渡动画时间
+$x-collapse-active-animate-date: $transition-time;
+
+// 进度条
+// 背景色
+$x-progress-bg-color: #e4eaec;
+// 宽度变化过渡时间
+$x-progress-animate-date: $transition-time;
+// 大小
+$x-progress-size: (
+  large: 12px,
+  default: 8px,
+  small: 5px
+);
+// 当前进度过度动画
+$progress-active-animate-date: 3s;
+// 环形
+$progress-circle-width: 110px;
+// 环形默认字体大小
+$progress-circle-text-size: 20px;
+
+/* 徽章 */
+// 字体颜色
+$x-badge-font-color: #fff;
+// 大小分类(左右padding,上下padding,字体大小)
+$x-badge-size: (
+  large: (3px, 6px, 14px),
+  default: (2px, 5px, 12px)
+);
+
+// 标签
+$x-tag-size: (
+  large: (4px, 7px, 13px),
+  default: (3px, 6px, 12px)
+);
+// 字体颜色
+$x-tag-font-color: #fff;
+// 默认圆角
+$x-tag-border-radius: $radius-default;
+// 关闭按钮背景
+$x-tag-close-btn-hover-bg: $bg-color-default;
+
+/* x-alert和x-notice共用 */ 
+$x-alert-padding: 12px;
+// 标题字体大小
+$x-alert-title-font-size: 14px;
+// 圆角角度
+$x-alert-border-radius: $radius-default;
+// 字体颜色
+$x-alert-font-color: #fff;
+// 内容字体大小
+$x-alert-content-font-size: 14px;
+// 关闭过度动画时间
+$x-alert-animate-date: $transition-time;
+// 图标大小
+$x-alert-icon-size: 32px;
+// 关闭图标大小
+$x-alert-close-icon-size: 12px;
+// 内容字体大小
+$x-alert-content-font-size: 13px;
+
+/* dialog对话框 */
+// 最小宽度
+$x-dialog-min-width: 270px;
+// 最大宽度
+$-xdialog-max-width: 360px;
+
+/* x-dailog和x-model共用*/
+// 对话框内边距
+$x-dialog-padding: 16px;
+$x-dialog-title-bg: #f3f7f9;
+// 标题高度
+$x-dialog-title-height: 42px;
+// 标题下边框
+$x-dialog-title-botder: 1px solid #e4eaec;
+// 标题字体大小
+$x-dialog-title-font-size: 14px;
+// 标题字体颜色
+$x-dialog-title-font-color: $title-color;
+// 关闭按钮大小
+$x-dialog-close-icon-size: 12px;
+// 内容字体大小
+$x-dialog-content-font-size: 14px;
+// 内容字体颜色
+$x-dialog-content-font-color: $font-color-auxiliary;
+// 按钮间距
+$x-dialog-footer-left: 4px;
+// 显示的过度动画时间
+$x-dialog-show-animate-date: 0.25s;
+// 图标大小
+$x-dialog-icon-size: 36px;
+// 不同类型
+$x-dialog-types: (
+  info: $color-primary,
+  success: $color-success,
+  warning: $color-warning,
+  error: $color-danger
+);
+
+/* toastr */
+// 宽度
+$x-notice-width: 300px;
+// top值
+$x-notice-top: 20px;
+// right值
+$x-notice-right: $x-notice-top;
+// 动画过渡时间
+$x-notice-animate-date: 0.4s;
+// 每个toastr之间的距离
+$x-notice-bottom: 16px;
+// 阴影
+$x-notice-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 5px rgba(0, 0, 0, 0.04);
+
+/* x-model */
+$x-model-size: (
+  large: 900px,
+  default: 650px,
+  small: 450px
+);
+
+$x-modal-tio: 80px;
+
+/* 侧边栏 */
+$x-sidebar-bg: #fff;
+// 过度动画
+$x-sidebar-animate-date: 0.35s;
+// 动画曲线
+$x-sidebar-animate-curve: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+// 导航菜单
+$x-menu-height: 60px;
+// 菜单字体大小
+$x-menu-item-font-size: 14px;
+// 菜单字体颜色
+$x-menu-font-color: $title-color;
+// 菜单左右边距
+$x-menu-item-left_right-padding: 16px;
+// 菜单图标右边距
+$x-menu-item-icon-right: 3px;
+// 菜单背景过度动画事件
+$x-menu-item-animate-date: $transition-time;
+// 白色类型item鼠标hover颜色
+$x-menu-baise-item_hover-font-color: $color-primary;
+
+/* 表格 */
+// thead背景
+$x-table-thead-bg: $bg-color-default;
+// 表格边框颜色
+$x-table-border-color: #e4eaec;
+// hover背景色
+$x-table-hover-bg: #f6fafe;// #f3f7f9;
+// 条纹背景
+$x-table-striped-bg: #fbfbfb;
+// 背景色改变过度时间
+$x-table-tr-bg-change-date: 0.1s;
+$x-table-transition: 0.1s;
+// size分类
+$x-table-size: (
+  large: (10px, 14px, $font-size-large),
+  default: (8px, 14px, $font-size-default),
+  small: (6px, 14px, $font-size-mini)
+);
+// 排序图标大小
+$x-table-sort-icon-size: $font-size-default;
+
+// tooltip提示文字
+$x-tooltip-font-color: #fff;
+// 内容背景色
+$x-tooltip-text-bg: rgba(0, 0, 0, 0.8);
+// 最大宽度
+$x-tooltip-max-width: 190px;
+// 圆角
+$x-tooltip-radius: 4px;
+// 三角形宽度
+$x-tooltip-arrow-height: 5px;
+// 间距
+$x-tooltip-spacing: 5px;
+$x-tooltip-padding: 8px 10px;
+// 类型
+$x-tooltip-types: $colors;
+
+/* 弹出层 */
+$x-popover-padding: 10px 10px;
+// 边框颜色
+$x-popover-border-color: rgba(204, 213, 219, 0.8);
+// 边框
+$x-popover-border: 1px solid $x-popover-border-color;
+// 阴影
+$x-popover-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.11);
+// 背景色
+$x-popover-bg: #fff;
+// 最小宽度
+$x-popover-min-width: 160px;
+// 最大宽度
+$x-popover-max-width: 280px;
+// 圆角
+$x-popover-radius: $radius-default;
+// 标题
+$x-popover-title-font-size: 14px;
+$x-popover-title-font-color: #333;
+$x-popover-title-padding: 8px;
+// 内容字
+$x-popover-content-font-size: 13px;
+$x-popover-content-font-color: #3f536e;
+
+/* 分页 */
+$x-page-font-size: $font-size-default;
+// 字体颜色
+$x-page-font-color: $font-color-auxiliary;
+// 边框颜色
+$x-page-button-border: 1px solid $border-color-default;
+// 鼠标hover背景
+$x-page-button-hover-bg: $color-default;
+// 鼠标hover字体颜色
+$x-page-button-hover-color: $color-primary;
+// 激活字体颜色
+$x-page-button-active-font-color: #fff;
+// 激活背景颜色
+$x-page-button-active-color: $color-primary;
+// 圆角
+$x-page-radius: $radius-default;
+// 按钮之间间隙
+$x-page-button-clearance: 3px;
+// 大小
+$x-page-size: (
+  large: (34px, 13px, $font-size-large),
+  default: (32px, 11px, 13px),
+  small: (28px, 9px, $font-size-mini)
+);
+// 分业禁用字体颜色
+$x-page-disabled-font-color: #ccd5db;

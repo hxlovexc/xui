@@ -1,0 +1,104 @@
+/*
+  * @Module: x-checkbox-button和x-radio-button公用
+ * @Author: 小缘
+ * @Date: 2017-06-11 22:16:01
+ */
+
+//input和radio共用
+@import '../variable.scss';
+
+@mixin checkbox_radop-button ($name) {
+  #{$name}-group{
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+
+    // 圆角
+    &#{$name}-button-radius{
+      #{$name}-button{
+        &:first-child{
+          border-radius: $x-checkbox_x-radio-radius-default 0 0 $x-checkbox_x-radio-radius-default;
+        }
+
+        &:last-child{
+          border-radius: 0 $x-checkbox_x-radio-radius-default $x-checkbox_x-radio-radius-default 0;
+        }
+      }
+    }
+
+    #{$name}-button{
+      position: relative;
+      display: inline-block;
+      line-height: 1;
+      border: $x-checkbox-border-default;
+      float: left;
+      margin-left: -1px;
+      box-sizing: border-box;
+      cursor: pointer;
+      transition: border $transition-time, background-color $transition-time;
+
+      & > input{
+        display: none
+      }
+
+      & > span{
+        transition: color $transition-time;
+      }
+    }
+
+    // 大小
+    @each $type, $val in $checkbox_radio-size{
+      &#{$name}-button-#{$type}{
+        #{$name}-button{
+          padding: 0 nth($val, 1);
+          height: nth($val, 2);
+          font-size: nth($val, 3);
+          line-height: nth($val, 2) - 2px;
+        }
+      }
+    }
+
+    // 选中
+    .x-checked{
+      z-index: 9;
+      
+      &#{$name}-button span{
+        color: #fff;
+      }
+    }
+
+    // 颜色分类
+    @each $type, $val in $colors{
+      &#{$name}-button-#{$type}{
+        #{$name}-button{
+          // 选中
+          &.x-checked{
+            background: $val;
+            border-color: $val;
+
+            &:hover span{
+              color: #fff;
+            }
+          }
+
+          // hover
+          &:hover span{
+            color: $val;
+          }
+        }
+      }
+    }
+
+    // 禁用
+    #{$name}-button.x-disabled,
+    #{$name}-button.x-disabled:hover{
+      background: $x-checkbox_x-radio-disabled-bg;
+      border-color: $x-checkbox_x-radio-disabled-border-color;
+      cursor: no-drop!important;
+      
+      span{
+        color: $x-checkbox_x-radio-disabled-color;
+      }
+    }
+  }
+}

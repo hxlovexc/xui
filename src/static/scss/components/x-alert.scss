@@ -1,0 +1,26 @@
+/*
+ * @Module: alert警告框
+ * @Author: 小缘
+ * @Date: 2017-07-20 12:00:43
+ */
+// 变量
+@import '../variable.scss';
+@import '../mixin/x-alert_x-notice.scss';
+
+// 基础样式
+@include x-alert_x-notice-box-notice('x-alert');
+
+.x-alert .x-alert-content{
+  font-size: $x-alert-content-font-size;
+}
+
+.x-alert-animate-enter-active,
+.x-alert-animate-leave-active {
+  transition: opacity $x-alert-animate-date;
+}
+
+// 过度动画
+.x-alert-animate-enter,
+.x-alert-animate-leave-to{
+  opacity: 0
+}

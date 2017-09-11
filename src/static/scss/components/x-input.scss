@@ -1,0 +1,148 @@
+/*
+ * @Module: input
+ * @Author: 小缘
+ * @Date: 2017-06-06 12:00:56
+ */
+// 变量
+@import '../variable.scss';
+// 公用
+@import '../mixin/index.scss';
+@import '../mixin/input-box.scss';
+
+// 基础样式
+@include text-box('.x-input');
+
+// input
+.x-input-box{
+  position: relative;
+
+  .x-input{
+    background: #fff;
+  }
+
+  // 圆角
+  &.x-input-radius{
+    .x-input{
+      border-radius: $input-radius-default;
+    }
+  }
+}
+
+// 大小
+@each $name, $val in $input-size{
+  &.x-input-#{$name}{
+    font-size: nth($val, 2);
+
+    .x-input{
+      height: nth($val, 1);
+      box-sizing: border-box;
+    }
+
+    // 图标
+    i{
+      width: nth($val, 1);
+      height: nth($val, 1);
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+      line-height: nth($val, 1) - 2px;
+    }
+
+    // 显示icon
+    &.x-show-icon{
+      .x-input{
+        padding-right: nth($val, 1);
+      }
+    }
+  }
+}
+
+// 颜色类型
+@each $name, $val in $colors{
+  .x-input-#{$name}{
+    .x-input{
+      border-color: $val;
+
+      &:hover{
+        border-color: lighten($val, $color-difference);
+      }
+
+      &:focus{
+        border-color: darken($val, $color-difference);
+      }
+
+      // 图标
+      & + i{
+        color: $val;
+      }
+    }
+  }
+}
+
+// inline
+.x-inline{
+  .x-input{
+    display: inline-block;
+    width: $input-inline-width;
+  }
+}
+
+// x-input-group
+.x-input-group{
+  display: inline-table;
+
+  .x-input,
+  .x-input-group-left,
+  .x-input-group-right{
+    display: table-cell;
+  }
+
+  .x-input-group-left,
+  .x-input-group-right{
+    width: 1px;
+    white-space: nowrap;
+    vertical-align: middle;
+    background: $x-input-group-bg-default;
+    border: $input-border-default;
+    padding: 0 $x-input-group-padding;
+
+    & > .x-button{
+      margin: 0 -$x-input-group-padding;
+      border: none;
+      background-color: transparent;
+      color: inherit;
+    }
+  }
+
+  .x-input-group-left{
+    border-right: none;
+  }
+
+  .x-input-group-right{
+    border-left: none;
+  }
+
+  // 圆角
+  &.x-input-radius{
+    .x-input-group-left,
+    .x-input-group-right{
+      border-radius: $input-radius-default;
+    }
+    
+    .x-input-group-right,
+    &.x-input-group-left-box .x-input{
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .x-input-group-left,
+    &.x-input-group-right-box .x-input{
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
+
+// 禁用
+@include disabled('.x-input');

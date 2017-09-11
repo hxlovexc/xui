@@ -1,0 +1,53 @@
+/*
+  * @Module: 模态框
+ * @Author: 小缘
+ * @Date: 2017-07-27 22:39:30
+ */
+
+// 变量
+@import '../variable.scss';
+@import '../mixin/x-dialog_x-modal.scss';
+
+// 基础样式
+@include modal-commom('x-modal');
+
+.x-modal{
+  margin-top: $x-modal-tio;
+
+  // 大小分类
+  @each $type, $size in $x-model-size{
+    &.x-modal-#{$type}{
+      width: $size;
+    }
+  }
+
+  .x-modal-footer{
+    padding-top: 10px;
+  }
+}
+
+// 过度动画
+.bounce-enter-active,
+.bounce-leave-active {
+  transition: opacity $x-dialog-show-animate-date;
+
+  .x-mask{
+    transition: opacity $x-dialog-show-animate-date;
+  }
+
+  .x-modal{
+    transition: transform $x-dialog-show-animate-date, opacity $x-dialog-show-animate-date;
+  }
+}
+
+.bounce-enter .x-modal,
+.bounce-leave-to .x-modal,
+.bounce-enter .x-mask,
+.bounce-leave-to .x-mask{
+  opacity: 0;
+}
+
+.bounce-enter .x-modal,
+.bounce-leave-to .x-modal{
+  transform: translateY(-30px);
+}

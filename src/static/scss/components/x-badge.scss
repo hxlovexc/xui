@@ -1,0 +1,36 @@
+/*
+ * @Module: 徽章
+ * @Author: 小缘
+ * @Date: 2017-07-18 17:35:55
+ */
+// 变量
+@import '../variable.scss';
+
+.x-badge{
+  display: inline-block;
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 12px;
+  color: $x-badge-font-color;
+
+  // 大小分类
+  @each $type, $size in $x-badge-size{
+    &.x-badge-#{$type}{
+      padding: nth($size, 1) nth($size, 2);
+      font-size: nth($size, 3);
+    }
+  }
+
+  // 颜色分类
+  @each $type, $color in $colors{
+    &.x-badge-#{$type}{
+      background: $color;
+    }
+  }
+
+  // 椭圆
+  &.x-radius{
+    border: 4px;
+  }
+}

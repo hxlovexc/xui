@@ -1,0 +1,104 @@
+/*
+  * @Module: 进度条
+ * @Author: 小缘
+ * @Date: 2017-07-16 23:14:24
+ */
+.x-progress{
+  display: block;
+  background: $x-progress-bg-color;
+  position: relative;
+
+  .x-progress-bar{
+    height: 100%;
+    transition: width $x-progress-animate-date;
+  }
+
+  // 圆角
+  .x-radius,
+  .x-radius .x-progress-bar{
+    overflow: hidden;
+    border-radius: 100px;
+  }
+}
+
+// 大小分类
+@each $type, $size in $x-progress-size{
+  .x-progress-#{$type}{
+    height: $size;
+  }
+}
+
+// 颜色类型
+@each $type, $color in $colors{
+  .x-progress-#{$type}{
+    .x-progress-bar{
+      background: $color;
+
+      &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        height: 100%;
+        background-color: #fff;
+        animation: progress-active-animate $progress-active-animate-date ease 0s infinite;
+      }
+    }
+  }
+}
+
+// 进度条动画
+@keyframes progress-active-animate {
+	0% {
+		width: 0;
+		opacity: 0.3;
+	}
+
+	100% {
+		width: 100%;
+		opacity: 0;
+	}
+}
+
+// 环形
+.x-progress-circle-box{
+  display: inline-block;
+  vertical-align: middle;
+  width: $progress-circle-width;
+  height: $progress-circle-width;
+
+  .x-progress-circle{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .x-progress-circle-text{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    &::after,
+    span{
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    span{
+      width: 100%;
+    }
+
+    &::after{
+      content: '';
+      height: 100%;
+    }
+
+    .x-progress-text{
+      display: block;
+      text-align: center;
+      font-size: $progress-circle-text-size;
+      line-height: 1;
+    }
+  }
+}

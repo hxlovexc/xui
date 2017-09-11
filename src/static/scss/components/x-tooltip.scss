@@ -1,0 +1,62 @@
+/*
+ * @Module: 文字提示
+ * @Author: 小缘
+ * @Date: 2017-08-01 12:02:09
+ */
+// 变量
+@import '../variable.scss';
+@import '../mixin/triangular-arrowheads.scss';
+
+// 内容
+.x-tooltip-box{
+  display: inline-block;
+}
+
+// 弹出的容器
+.x-tooltip{
+  position: absolute;
+  z-index: 999;
+
+  .x-tooltip-text{
+    display: inline-block;
+    position: relative;
+    max-width: $x-tooltip-max-width;
+    padding: $x-tooltip-padding;
+    color: $x-tooltip-font-color;
+    text-align: center;
+    background-color: $x-tooltip-text-bg;
+    white-space: nowrap;
+    border-radius: $x-tooltip-radius;
+  }
+  
+  @include triangular-arrowheads('.x-tooltip', $x-tooltip-text-bg, $x-tooltip-arrow-height, '');
+  
+  // 分类
+  @each $type, $color in $x-tooltip-types{
+    &.x-tooltip-#{$type}{
+      .x-tooltip-text{
+        background-color: $color;
+      }
+
+      // top
+      &.x-tooltip-top .arrow{
+        border-top-color: $color;
+      }
+
+      // bottom
+      &.x-tooltip-bottom .arrow{
+        border-bottom-color: $color;
+      }
+      
+      // left
+      &.x-tooltip-left .arrow{
+        border-left-color: $color;
+      }
+      
+      // right
+      &.x-tooltip-right .arrow{
+        border-right-color: $color;
+      }
+    }
+  };
+}

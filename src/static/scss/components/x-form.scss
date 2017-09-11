@@ -1,0 +1,147 @@
+/*
+ * @Module: 表单
+ * @Author: 小缘
+ * @Date: 2017-07-19 10:46:37
+ */
+// 变量
+@import '../variable.scss';
+// label上下padding
+$up-and-down-padding: ($x-form-item-height - $x-form-label-font-size) / 2;
+.x-form{
+  display: block;
+
+  .x-form-item{
+    margin-bottom: 15px;
+    clear: both;
+
+    .x-form-label{
+      position: relative;
+
+      text-align: right;
+      float: left;
+      width: $x-form-label-width;
+      display: block;
+      box-sizing: border-box;
+      font-size: $x-form-label-font-size;
+      line-height: 1;
+      color: $x-form-label-font-color;
+      padding: $up-and-down-padding $x-form-label-right-padding $up-and-down-padding 0;
+    }
+
+    .x-form-msg,
+    .x-form-content{
+      margin-left: $x-form-label-width;
+    }
+
+    // 内容
+    .x-form-content{
+      position: relative;
+      line-height: $x-form-item-height;
+
+      // block元素
+      .x-select{
+        display: block;
+        width: 100%;
+      }
+
+      .x-checkbox,
+      .x-radio,
+      .x-textarea{
+        vertical-align: top;
+      }
+    }
+
+    // 信息提示
+    .x-form-msg{
+      padding-top: $x-form-msg-padding-top;
+      line-height: 1;
+      font-size: $x-form-msg-font-size;
+    }
+  }
+}
+
+// label位置
+// left
+.x-form-label-left{
+  .x-form-item .x-form-label{
+    text-align: left;
+  }
+}
+
+.x-form-label-top{
+  .x-form-item{
+    .x-form-label{
+      padding: 0 0 10px;
+      float: none;
+      text-align: left;
+    }
+
+    .x-form-content{
+      margin-left: 0;
+    }
+  }
+}
+
+// 方块风格
+.x-form-pane{
+  $border: 1px solid $x-form-pane-border-color;
+
+  // 移除没有label的margin-left
+  .x-form-item .x-form-content{
+    margin-left: 0;
+  }
+
+  .x-form-item-pane{
+    border: $border;
+
+    .x-form-label{
+      background: $x-form-pane-label-bg;
+      border-right: $border;
+      text-align: center;
+      padding: $up-and-down-padding $x-form-label-right-padding;
+    }
+
+    .x-form-content{
+      margin-left: $x-form-label-width;
+      
+      .x-input,
+      .x-textarea,
+      .x-select .x-select-input{
+        border: none;
+      }
+
+      // 添加左边距
+      .x-checkbox,
+      .x-radio,
+      .x-checkbox-group,
+      .x-checkbox-radio,
+      .x-button,
+      .x-switch{
+        &:first-child{
+          margin-left: 15px;
+        }
+      }
+      
+      .x-checkbox-group .x-checkbox:first-child,
+      .x-checkbox-radio .x-radio:first-child{
+        margin-left: 0;
+      }
+    }
+  }
+
+  // textarea
+  .x-textarea-pane{
+    .x-form-label{
+      width: 100%;
+      display: block;
+      border-right: 0;
+      border-bottom: $border;
+      text-indent: $x-form-label-right-padding;
+      text-align: left;
+    }
+
+    .x-form-content{
+      margin-left: 0;
+    }
+  }
+}

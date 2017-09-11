@@ -1,0 +1,49 @@
+/*
+ * @Module: text样式
+ * @Author: 小缘
+ * @Date: 2017-06-04 15:09:18
+ */
+// 变量
+@import '../variable.scss';
+
+//标题和h标签
+@each $name, $val in $h{
+  .#{$name},
+  #{$name}{
+    font-weight: 400;
+  }
+
+  .#{$name},
+  #{$name}{
+    font-size: nth($val, 1);
+    margin-bottom: nth($val, 3);
+    margin-top: nth($val, 4);
+
+    small{
+      font-size: nth($val, 2);
+      color: $font-color-auxiliary;
+    }
+  }
+}
+
+// 居中
+.x-text-c{
+  text-align: center;
+}
+
+// 居左
+.x-text-l{
+  text-align: left;
+}
+
+// 居右
+.x-text-r{
+  text-align: right;
+}
+
+//单行文本溢出省略号
+.x-elip{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

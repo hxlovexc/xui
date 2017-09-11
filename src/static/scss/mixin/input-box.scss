@@ -1,0 +1,26 @@
+/*
+ * @Module: input和textarea公用
+ * @Author: 小缘
+ * @Date: 2017-06-06 15:05:46
+ */
+// 变量
+@import '../variable.scss';
+
+@mixin text-box ($name) {
+  #{$name}{
+    width: 100%;
+    color: inherit;
+    box-sizing: border-box;
+    border: $input-border-default;
+    padding: $input-padding;
+    transition: border $transition-time;
+
+    &:hover{
+      border-color: $input-border-default-hover;
+    }
+
+    &:focus{
+      border-color: $input-border-default-active;
+    }
+  }
+}

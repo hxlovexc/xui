@@ -1,0 +1,125 @@
+/*
+ * @Module: 按钮
+ * @Author: 小缘
+ * @Date: 2017-06-04 19:41:19
+ */
+// 变量
+@import '../variable.scss';
+// 公用
+@import '../mixin/index.scss';
+
+.x-button{
+  position: relative;
+  display: inline-block;
+  border: $button-border-default $button-border-default-default;
+  cursor: pointer;
+  box-sizing: border-box!important;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  background: $button-bg-default;
+  line-height: 1;
+  transition: background $transition-time, border $transition-time, color $transition-time;
+
+  // hover
+  &:hover,
+  &:focus{
+    color: $button-color-default-hover;
+    background: $button-bg-default-hover;
+    border-color: $button-border-default-hover;
+  }
+
+  // active
+  &:active{
+    color: $button-color-default-active;
+    background: $button-bg-default-active;
+    border-color: $button-border-default-active;
+  }
+
+  i{
+    display: inline-block;
+    line-height: 1;
+    // margin-right: 5px;
+  }
+
+  // span{
+  //   vertical-align: middle;
+  // }
+
+  // block
+  &.x-block{
+    width: 100%;
+  }
+
+  // loading
+  &.x-loading{
+    pointer-events: none;
+
+    &::after{
+      position: absolute;
+      content: '';
+      left: -1px;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      background: #fff;
+      opacity: 0.5;
+    }
+
+    i{
+      animation: rotating 1.2s linear infinite;
+    }
+  }
+}
+
+// 大小
+@each $name, $val in $button-size{
+  .x-button-#{$name}{
+    padding: 0 nth($val, 1);
+    height: nth($val, 2);
+    font-size: nth($val, 3);
+  }
+}
+
+// 颜色分类
+@each $name, $val in $colors{
+  .x-button-#{$name}{
+    color: #fff;
+    border-color: $val;
+    background: $val;
+
+    // hover
+    &.x-hollow:hover,
+    &.x-hollow:focus,
+    &:hover,
+    &:focus{
+      $color: lighten($val, $color-difference);
+      border-color: $color;
+      background: $color;
+      color: #fff;
+    }
+
+    // active
+    &.x-hollow:active,
+    &:active{
+      color: #fff;
+      $color: darken($val, $color-difference);
+      border-color: $color;
+      background: $color;
+    }
+
+    &.x-hollow{
+      background: transparent;
+      border-color: $val;
+      color: $val;
+
+      &.x-hollow:hover,
+      &.x-hollow:focus{
+        color: #fff;
+      }
+    }
+  }
+}
+
+// 禁用
+@include disabled('.x-button');

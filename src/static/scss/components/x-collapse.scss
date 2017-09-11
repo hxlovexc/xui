@@ -1,0 +1,57 @@
+/*
+  * @Module: 折叠面板
+ * @Author: 小缘
+ * @Date: 2017-07-16 14:20:23
+ */
+// 变量
+@import '../variable.scss';
+
+.x-collapse{
+  border: $x-collapse-border;
+
+  .x-collapse-item{
+    border-top: $x-collapse-border;
+
+    // 第一个移除上边距
+    &:first-child{
+      border-top: 0;
+    }
+
+    .x-collapse-header{
+      padding: 0 $x-collapse-padding;
+      height: $x-collapse-header-height;
+      line-height: $x-collapse-header-height;
+      cursor: pointer;
+      position: relative;
+      background: $x-collapse-heaer-bg;
+
+      // 图标
+      & > i{
+        font-size: $x-collapse-header-icon-size;
+        position: absolute;
+        left: $x-collapse-padding;
+        top: 50%;
+        margin-top: -$x-collapse-header-height / 2;
+        transition: transform $x-collapse-active-animate-date;
+      }
+
+      .x-collapse-title{
+        padding-left: $x-collapse-header-icon-size * 0.8;
+      }
+    }
+
+    // 内容
+    .x-collapse-content{
+      border-top: $x-collapse-border;
+      padding: $x-collapse-padding - 5 $x-collapse-padding;
+      line-height: 1.45;
+    }
+  }
+
+  // 激活状态
+  .x-collapse-active{
+    .x-collapse-header > i{
+      transform: rotate(90deg);
+    }
+  }
+}

@@ -1,0 +1,45 @@
+/*
+  * @Module: 弹出框
+ * @Author: 小缘
+ * @Date: 2017-09-08 23:11:59
+ */
+
+// 变量
+@import '../variable.scss';
+@import '../mixin/triangular-arrowheads.scss';
+
+.x-popover-box{
+  display: inline-block;
+}
+
+.x-popover{
+  position: absolute;
+  display: inline-block;
+  z-index: 999;
+
+  .x-popover-text{
+    border: $x-popover-border;
+    background: $x-popover-bg;
+    padding: $x-popover-padding;
+    min-width: $x-popover-min-width;
+    max-width: $x-popover-max-width;
+    border-radius: $x-popover-radius;
+    box-shadow: $x-popover-box-shadow;
+    
+    // 内容
+    .x-popover-title{
+      color: $x-popover-title-font-color;
+      font-size: $x-popover-title-font-size;
+      padding-bottom: $x-popover-title-padding;
+      line-height: 1;
+    }
+
+    // 内容
+    .x-popover-content{
+      color: $x-popover-content-font-color;
+      font-size: $x-popover-content-font-size;
+    }
+  }
+  
+  @include triangular-arrowheads('.x-popover', $x-popover-border-color, $x-tooltip-arrow-height, $x-popover-bg);
+}
