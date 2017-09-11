@@ -17,7 +17,7 @@ export function getScrollbarWidth () {
   }
   document.body.appendChild($p);
   scrollbarWidth = $p.offsetWidth - $p.clientWidth;
-  $p.remove();
+  document.body.removeChild($p);
   return scrollbarWidth;
 }
 

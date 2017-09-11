@@ -49,7 +49,7 @@
       updateState (value) {
         this.model = value;
         // 获取当前组件下所有的x-checkbox
-        this::find('x-checkbox', (item) => {
+        find.call(this, 'x-checkbox', (item) => {
           item.state = value.indexOf(item.label) > -1;
         });
       }

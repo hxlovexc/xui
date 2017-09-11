@@ -24,9 +24,7 @@ Vue.prototype.$size = [
 ];
 
 /* eslint-disable no-new */
-let vm = new Vue({
+new Vue({
   el: '#app',
   router
 });
-
-window.vm = vm;

@@ -26,7 +26,7 @@ export default {
     return {
       model: '',
       state: this.value,
-      PARENT: this::parent('x-checkbox-group')
+      PARENT: parent.call(this, 'x-checkbox-group')
     };
   },
   methods: {

@@ -41,7 +41,7 @@
     },
     data () {
       return {
-        PARENT: this::parent('x-select'),
+        PARENT: parent.call(this, 'x-select'),
         index: 0,
         show: true
       };

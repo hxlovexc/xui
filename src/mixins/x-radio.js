@@ -30,7 +30,7 @@ export default {
       }
     },
     PARENT () {
-      return this::parent('x-radio-group');
+      return parent.call(this, 'x-radio-group');
     }
   },
   methods: {

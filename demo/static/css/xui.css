@@ -5910,7 +5910,8 @@ h6 {
     .x-table-box .x-table th,
     .x-table-box .x-table td {
       line-height: 1.5;
-      vertical-align: middle; }
+      vertical-align: middle;
+      text-align: inherit; }
       .x-table-box .x-table th > div,
       .x-table-box .x-table td > div {
         position: relative; }

@@ -56,9 +56,9 @@ export default {
     sort (key, type) {
       this.data.sort((a, b) => {
         if (type === 'up') {
-          return a[key] > b[key];
+          return a[key] > b[key] ? 1 : -1;
         }
-        return a[key] < b[key];
+        return a[key] < b[key] ? 1 : -1;
       });
     },
     calculateColWidth () {

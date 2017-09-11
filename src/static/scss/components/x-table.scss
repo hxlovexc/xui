@@ -65,6 +65,7 @@
     td{
       line-height: 1.5;
       vertical-align: middle;
+      text-align: inherit;
 
       & > div{
         position: relative;
@@ -152,26 +153,6 @@
   &.x-table-bordered{
     overflow: hidden;
     border-bottom: 1px solid $x-table-border-color;
-    // .x-table-body{
-    //   border-top: none;
-    // }
-
-    // thead > tr:first-child > th{
-    //   border-top: none;
-    // }
-
-    // // 移除td左右边框
-    // tbody{
-    //   td{
-    //     &:first-child{
-    //       border-left: none;
-    //     }
-
-    //     &:last-child{
-    //       border-right: none;
-    //     }
-    //   }
-
     tr:last-child{
       td{
         border-bottom: none;
