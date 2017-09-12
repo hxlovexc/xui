@@ -2,7 +2,7 @@
 - 基于 `Vue.js 2.0` 的前端 轻量级的ui组件库 - 可以帮助你轻松开发你的pc端web应用程序
 
 ## 更详细的文档
-### [中文文档](https://hxlovexc.github.io/xui/#/doc/x-popover)
+### [中文文档](https://hxlovexc.github.io/xui/)
 
 ## version
 - v0.6.0
