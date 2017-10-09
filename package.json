@@ -59,7 +59,6 @@
     "gulp-minify-css": "^1.2.4",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass-china": "^3.1.0",
     "html-webpack-plugin": "^2.28.0",
     "less": "^2.7.2",
     "less-loader": "^4.0.3",

@@ -173,6 +173,12 @@ let routes = [
     component (resolve) {
       require(['../view/x-popover.vue'], resolve);
     }
+  },
+  {
+    path: '/x-upload',
+    component (resolve) {
+      require(['../view/x-upload.vue'], resolve);
+    }
   }
 ];
 

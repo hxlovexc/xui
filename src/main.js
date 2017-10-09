@@ -40,6 +40,7 @@ import xTable from 'components/x-table/x-table.js';
 import xTableColumn from 'components/x-table/x-table-column.js';
 import xPopover from 'components/x-popover/x-popover.js';
 import xPage from 'components/x-page/x-page.vue';
+import xUpload from 'components/x-upload/x-upload.vue';
 
 // 方法
 import dialog from 'components/x-dialog/x-dialog.js';
@@ -86,7 +87,8 @@ let xui = {
   xTable,
   xTableColumn,
   xPopover,
-  xPage
+  xPage,
+  xUpload
 };
 
 // 框架方法集合
