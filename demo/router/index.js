@@ -179,6 +179,12 @@ let routes = [
     component (resolve) {
       require(['../view/x-upload.vue'], resolve);
     }
+  },
+  {
+    path: '/x-message',
+    component (resolve) {
+      require(['../view/x-message.vue'], resolve);
+    }
   }
 ];
 

@@ -64,12 +64,12 @@
           <template slot="head">
             <i class="x-icon-person"></i>性别
           </template>
-          <template scope="sex">
+          <template slot-scope="sex">
             <x-tag>{{sex ? '男' : '女'}}</x-tag>
           </template>
         </x-table-column>
         <x-table-column label="状态">
-          <template scope="data">
+          <template slot-scope="data">
              <x-button
               size="mini"
               :type="data.row.state ? 'primary' : 'danger'"

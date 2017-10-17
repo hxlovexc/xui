@@ -45,6 +45,7 @@ import xUpload from 'components/x-upload/x-upload.vue';
 // 方法
 import dialog from 'components/x-dialog/x-dialog.js';
 import notice from 'components/x-notice/x-notice.js';
+import message from 'components/x-message/x-message.js';
 
 // 指令
 // import clickoutside from 'directives/click-outside';
@@ -94,7 +95,8 @@ let xui = {
 // 框架方法集合
 const methods = {
   dialog,
-  notice
+  notice,
+  message
 };
 
 // 指令集合
