@@ -87,7 +87,7 @@
     opacity: 1;
     transform: scale(1); } }
 
-@keyframes let-move {
+@keyframes left-move {
   0% {
     opacity: 0;
     transform: translateX(100%); }
@@ -97,6 +97,14 @@
   100% {
     opacity: 1;
     transform: translateX(0%); } }
+
+@keyframes top-move {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0%); } }
 
 /*
  * @Module: reset
@@ -1454,7 +1462,7 @@ h6 {
     opacity: 1;
     transform: scale(1); } }
 
-@keyframes let-move {
+@keyframes left-move {
   0% {
     opacity: 0;
     transform: translateX(100%); }
@@ -1464,6 +1472,14 @@ h6 {
   100% {
     opacity: 1;
     transform: translateX(0%); } }
+
+@keyframes top-move {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0%); } }
 
 .x-checkbox-primary:hover i,
 .x-checkbox-primary.x-checked > i {
@@ -1929,7 +1945,7 @@ h6 {
     opacity: 1;
     transform: scale(1); } }
 
-@keyframes let-move {
+@keyframes left-move {
   0% {
     opacity: 0;
     transform: translateX(100%); }
@@ -1939,6 +1955,14 @@ h6 {
   100% {
     opacity: 1;
     transform: translateX(0%); } }
+
+@keyframes top-move {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0%); } }
 
 .x-radio-primary:hover i,
 .x-radio-primary.x-checked > i {
@@ -5353,11 +5377,11 @@ h6 {
     .x-notice-box .x-notice.x-notice-dark {
       background: #667180; }
 
-.x-notice-let-move-enter-active {
-  animation: let-move 0.4s; }
+.x-notice-left-move-enter-active {
+  animation: left-move 0.4s; }
 
-.x-notice-let-move-leave-active {
-  animation: let-move 0.4s reverse; }
+.x-notice-left-move-leave-active {
+  animation: left-move 0.4s reverse; }
 
 /*
   * @Module: 模态框
@@ -6306,3 +6330,92 @@ h6 {
 .x-upload-box {
   display: inline-block;
   vertical-align: middle; }
+
+/**
+ * @Module: message全局提示
+ * @Author: 小缘
+ * @create date 2017-10-17 06:20:56
+*/
+/* base */
+/* 颜色 */
+/* 颜色分类 */
+/* 动画过渡 */
+/* 组件和模块 */
+/* 字体 */
+/* x-quote */
+/* 按钮 */
+/* input */
+/* x-input-group */
+/* textarea */
+/* 计数器 */
+/* checkbox和radio */
+/* 多选和单选按钮组 */
+/* 下拉选择 */
+/* 开关 */
+/* 滑块 */
+/* 表单 */
+/* 选项卡 */
+/* 折叠面板 */
+/* 徽章 */
+/* x-alert和x-notice共用 */
+/* dialog对话框 */
+/* x-dailog和x-model共用*/
+/* toastr */
+/* x-model */
+/* 侧边栏 */
+/* 表格 */
+/* 弹出层 */
+/* 分页 */
+.x-message {
+  position: fixed;
+  left: 0;
+  top: 0; }
+  .x-message .x-message-list {
+    text-align: center;
+    padding-top: 16px;
+    position: relative; }
+    .x-message .x-message-list li {
+      position: absolute;
+      display: inline-block; }
+      .x-message .x-message-list li .x-message-icon {
+        padding-right: 2px; }
+        .x-message .x-message-list li .x-message-icon i {
+          font-size: 0; }
+          .x-message .x-message-list li .x-message-icon i:before {
+            font-size: 20px;
+            line-height: 1; }
+      .x-message .x-message-list li .x-message-item {
+        position: relative;
+        right: 50%;
+        padding: 7px 13px;
+        border-radius: 4px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+        background: #fff; }
+        .x-message .x-message-list li .x-message-item .x-message-icon,
+        .x-message .x-message-list li .x-message-item > p {
+          display: inline-block;
+          vertical-align: middle;
+          line-height: 1;
+          font-size: 14px; }
+    .x-message .x-message-list .x-message-primary .x-message-icon {
+      color: #4399ff; }
+    .x-message .x-message-list .x-message-success .x-message-icon {
+      color: #46be8a; }
+    .x-message .x-message-list .x-message-warning .x-message-icon {
+      color: #f2a654; }
+    .x-message .x-message-list .x-message-danger .x-message-icon {
+      color: #f96868; }
+    .x-message .x-message-list .x-message-dark .x-message-icon {
+      color: #667180; }
+  .x-message .x-message-loading .x-message-icon i {
+    color: #4399ff; }
+    .x-message .x-message-loading .x-message-icon i::before {
+      animation: rotating 1s linear infinite; }
+  .x-message .x-message-transitioning-enter-active {
+    animation: top-move 0.4s; }
+  .x-message .x-message-transitioning-leave-active {
+    animation: top-move 0.4s reverse; }
+
+.x-message,
+.x-message .x-message-list {
+  width: 100%; }

@@ -1,0 +1,88 @@
+/**
+ * @Module: message全局提示
+ * @Author: 小缘
+ * @create date 2017-10-17 06:20:56
+*/
+
+// 变量
+@import '../variable.scss';
+
+.x-message {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  .x-message-list {
+    text-align: center;
+    padding-top: 16px;
+    position: relative;
+
+    li {
+      position: absolute;
+      display: inline-block;
+
+      // 图标
+      .x-message-icon {
+        padding-right: 2px;
+
+        i {
+          font-size: 0;
+
+          &:before {
+            font-size: 20px;
+            line-height: 1;
+          }
+        }
+      }
+
+      .x-message-item {
+        position: relative;
+        right: 50%;
+        padding: 6px 13px;
+        border-radius: 4px;
+        box-shadow: 0 1px 6px rgba(0,0,0,.2);
+        background: #fff;
+        
+        .x-message-icon,
+        & > p {
+          display: inline-block;
+          vertical-align: middle;
+          line-height: 1;
+          font-size: 14px;
+        }
+      }
+    }
+
+    // 颜色分类
+    @each $type, $color in $colors {
+      .x-message-#{$type} {
+        .x-message-icon {
+          color: $color;
+        }
+      }
+    }
+  }
+
+  // loading
+  .x-message-loading .x-message-icon i {
+    color: $color-primary;
+
+    &::before {
+      animation: rotating 1s linear infinite;
+    }
+  }
+
+  // 过度动画
+  .x-message-transitioning-enter-active {
+    animation: top-move $x-notice-animate-date;
+  }
+
+  .x-message-transitioning-leave-active {
+    animation: top-move $x-notice-animate-date reverse;
+  }
+}
+
+.x-message,
+.x-message .x-message-list {
+  width: 100%;
+}

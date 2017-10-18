@@ -24,10 +24,10 @@
 }
 
 // 过度动画
-.x-notice-let-move-enter-active {
-  animation: let-move $x-notice-animate-date;
+.x-notice-left-move-enter-active {
+  animation: left-move $x-notice-animate-date;
 }
 
-.x-notice-let-move-leave-active {
-  animation: let-move $x-notice-animate-date reverse;
+.x-notice-left-move-leave-active {
+  animation: left-move $x-notice-animate-date reverse;
 }

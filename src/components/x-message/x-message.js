@@ -12,11 +12,12 @@ let instance = '';
 // 默认配置
 const defaultConfig = {
   top: '18px',
-  timer: 2000
+  timer: 3000
 };
 // 类型
-const types = ['success', 'warning', 'danger', 'dark'];
-let type = 'default';
+const types = ['loading', 'primary', 'success', 'warning', 'danger', 'dark'];
+// 类型
+let type = '';
 
 // 初始化
 function initInstance () {
@@ -37,9 +38,12 @@ function showNotice (options) {
 
 // 创建
 function createMessage (message, options, close) {
+  const name = `x-message-${Date.now()}`;
+  // 第一个参数必须为字符串
   if (typeof message !== 'string') {
     return console.error('第一个参数必须为字符串');
   }
+  // 判断options是否存在
   if (typeof options === 'function') {
     close = options;
     options = {};
@@ -50,11 +54,15 @@ function createMessage (message, options, close) {
   }
   showNotice(Object.assign({}, defaultConfig, options, {
     type,
-    close
+    close,
+    message,
+    name
   }));
+  // 清空
+  type = null;
   // 关闭
   return () => {
-    instance.close();
+    instance.close(name);
   };
 }
 
@@ -64,6 +72,11 @@ types.forEach((item) => {
     return createMessage.apply(this, arguments);
   };
 });
+
+// 关闭全部
+message.closeAll = () => {
+  instance && instance.close();
+};
 
 export default function message () {
   return createMessage.apply(this, arguments);
