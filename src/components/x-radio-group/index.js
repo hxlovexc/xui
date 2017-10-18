@@ -1,5 +1,5 @@
-import xRadioButtonGroup from './x-radio-button-group.vue';
+import xRadioGroup from './x-radio-group.vue';
 
 export {
-  xRadioButtonGroup
+  xRadioGroup
 };

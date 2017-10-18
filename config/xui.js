@@ -5,5 +5,6 @@
  */
 module.exports = {
   entry: '../src/main.js',
-  outputPath: '../dist/'
+  outputPath: '../dist/',
+  componentsOutputPath: '../dist/lib'
 };

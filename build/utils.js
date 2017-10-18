@@ -6,10 +6,14 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 const extractTextWebpackPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
+  // 列出所有文件
+  rdDir (dir) {
+    return glob.sync(path.resolve(__dirname, dir))
+  },
   //获取文件
   getFiles (_path) {
     let entries = {}, baseName;
-    glob.sync(path.resolve(__dirname, _path)).forEach((entry) => {
+    this.rdDir(_path).forEach((entry) => {
       baseName = path.basename(entry, path.extname(entry));
       entries[baseName] = entry;
     });
