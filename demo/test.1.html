@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>x-ui</title>
+  <link rel="stylesheet" href="./static/css/xui.css">
+</head>
 <body>
-<style>
-	circle {
-    -webkit-transition: stroke-dasharray .25s;
-    transition: stroke-dasharray .25s;
-}	
-</style>
-<svg width="440" height="440" viewbox="0 0 440 440">
-    <circle cx="220" cy="220" r="170" stroke-width="8" stroke="#D1D3D7" fill="none"></circle>
-    <circle cx="220" cy="220" r="170" stroke-width="8" stroke="#00A5E0" fill="none" transform="matrix(0,-1,1,0,0,440)" stroke-dasharray="109 1069"></circle>
-</svg>
- 
+  <div id="app">
+    <div class="router-box">
+    </div>
+  </div>
+  <script src="../dist/lib/x-alert.js"></script>
 </body>
 </html>

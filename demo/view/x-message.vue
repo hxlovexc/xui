@@ -28,10 +28,6 @@
 </template>
 
 <script>
-  import aa from '../../dist/lib/x-button';
-
-  console.log(aa);
-
   export default {
     data () {
       return {

@@ -1,5 +1,3 @@
 import xRadio from './x-radio.vue';
 
-export {
-  xRadio
-};
+export default xRadio;

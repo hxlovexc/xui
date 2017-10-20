@@ -1,5 +1,3 @@
 import xButton from './x-button.vue';
 
-export {
-  xButton
-};
+export default xButton;

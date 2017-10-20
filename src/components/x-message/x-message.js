@@ -40,8 +40,9 @@ function showNotice (options) {
 function createMessage (message, options, close) {
   const name = `x-message-${Date.now()}`;
   // 第一个参数必须为字符串
-  if (typeof message !== 'string') {
-    return console.error('第一个参数必须为字符串');
+  const messageType = typeof message;
+  if (messageType !== 'string' || messageType !== 'number') {
+    return console.error('xui -> (x-message组件) : 第一个参数必须为字符串或者数字');
   }
   // 判断options是否存在
   if (typeof options === 'function') {

@@ -20,7 +20,8 @@ const webpackConfig = merge(baseConfig.config, {
   entry: entrys,
   output: {
     //构建输出目录
-    path: utils.resolve(config.componentsOutputPath)
+    path: utils.resolve(config.componentsOutputPath),
+    libraryTarget: 'commonjs2'
   }
 });
 

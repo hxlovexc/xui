@@ -1,6 +1,3 @@
 import xMessage from './x-message.vue';
 
-export default {
-  xMessage
-};
-
+export default xMessage;

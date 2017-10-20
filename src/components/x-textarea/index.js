@@ -1,5 +1,3 @@
 import xTextarea from './x-textarea.vue';
 
-export {
-  xTextarea
-};
+export default xTextarea;

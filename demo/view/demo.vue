@@ -19,8 +19,3 @@
     }
   };
 </script>
-
-
-<style lang="scss">
-  @import './test.scss';
-</style>

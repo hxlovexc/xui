@@ -1,5 +1,3 @@
 import xTooltip from './x-tooltip.js';
 
-export default {
-  xTooltip
-};
+export default xTooltip;

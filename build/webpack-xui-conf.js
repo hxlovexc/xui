@@ -7,7 +7,8 @@ const webpackConfig = merge(baseConfig.config, {
   entry: utils.resolve(config.entry),
   output: {
     //构建输出目录
-    path: utils.resolve(config.outputPath)
+    path: utils.resolve(config.outputPath),
+    libraryTarget: 'umd'
   }
 });
 

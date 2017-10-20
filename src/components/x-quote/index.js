@@ -1,5 +1,3 @@
 import xQuote from './x-quote.vue';
 
-export {
-  xQuote
-};
+export default xQuote;

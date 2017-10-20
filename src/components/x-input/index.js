@@ -1,5 +1,3 @@
 import xInput from './x-input.vue';
 
-export {
-  xInput
-};
+export default xInput;

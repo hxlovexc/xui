@@ -1,5 +1,3 @@
 import xButtonGroup from './x-button-group.vue';
 
-export {
-  xButtonGroup
-};
+export default xButtonGroup;

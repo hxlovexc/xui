@@ -36,6 +36,7 @@ import xModal from 'components/x-modal/x-modal.vue';
 import xSidebar from 'components/x-sidebar/x-sidebar.vue';
 import xMenu from 'components/x-menu/x-menu.vue';
 import xMenuItem from 'components/x-menu/x-menu-item.vue';
+import xSubmenu from 'components/x-submenu/x-submenu.vue';
 import xTable from 'components/x-table/x-table.js';
 import xTableColumn from 'components/x-table/x-table-column.js';
 import xPopover from 'components/x-popover/x-popover.js';
@@ -85,6 +86,7 @@ let xui = {
   xSidebar,
   xMenu,
   xMenuItem,
+  xSubmenu,
   xTable,
   xTableColumn,
   xPopover,

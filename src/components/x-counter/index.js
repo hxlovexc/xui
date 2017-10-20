@@ -1,4 +1,3 @@
 import xCounter from './x-counter.vue';
-export {
-  xCounter
-};
+
+export default xCounter;

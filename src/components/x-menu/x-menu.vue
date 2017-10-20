@@ -1,14 +1,17 @@
 <template>
   <div
-    class="x-menu x-clear-float"
+    class="x-menu"
     :class="[
-      'x-menu-' + type
+      'x-menu-' + theme,
+      'x-menu-' + mode
     ]"
   >
-    <div class="x-menu-logo" v-if="$slots.logo">
-      <slot name="logo"></slot>
-    </div>
-    <ul class="x-menu-list ">
+    <ul
+      class="x-menu-list"
+      :class="{
+        'x-clear-float': mode === 'level'
+      }"
+    >
       <slot></slot>
     </ul>
   </div>
@@ -16,14 +19,19 @@
 
 <script>
   export default {
+    name: 'x-menu',
     props: {
-      type: {
+      theme: {
         type: String,
         default: 'primary'
       },
       active: {
         type: String,
         default: ''
+      },
+      mode: {
+        type: String,
+        default: 'level'
       }
     },
     data () {
@@ -39,4 +47,3 @@
     }
   };
 </script>
-

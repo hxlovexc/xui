@@ -6,7 +6,9 @@
     }"
     @click="menuClick"
   >
-    <slot></slot>
+    <div class="x-menu-item-title">
+      <slot></slot>
+    </div>
   </li>
 </template>
 

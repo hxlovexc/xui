@@ -12,9 +12,7 @@ module.exports = {
     output: {
       filename: '[name].js',
       //请求目录
-      publicPath: '/',
-      libraryTarget: 'umd',
-      umdNamedDefine: false
+      publicPath: '/'
     },
     resolve: resolve,
     externals: {

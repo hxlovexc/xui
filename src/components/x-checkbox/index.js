@@ -1,5 +1,3 @@
 import xCheckbox from './x-checkbox.vue';
 
-export {
-  xCheckbox
-};
+export default xCheckbox;

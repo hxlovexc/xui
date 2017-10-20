@@ -1,4 +1,3 @@
 import xUpload from './x-upload.vue';
-export {
-  xUpload
-};
+
+export default xUpload;
