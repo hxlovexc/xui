@@ -1,3 +1,10 @@
+/**
+ * @module [单独打包每个组件到lib下]
+ * @author [贺喜]
+ * @create date 2017-10-20 06:47:34
+ * @params [description]
+*/
+
 const merge = require('webpack-merge');
 const baseConfig = require('./webpack-xui-base-conf');
 const config = require('../config/xui');
@@ -19,7 +26,7 @@ files.forEach((item) => {
 const webpackConfig = merge(baseConfig.config, {
   entry: entrys,
   output: {
-    //构建输出目录
+    // 构建输出目录
     path: utils.resolve(config.componentsOutputPath),
     libraryTarget: 'commonjs2'
   }
