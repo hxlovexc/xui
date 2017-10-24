@@ -9,6 +9,10 @@ const merge = require('webpack-merge');
 const baseConfig = require('./webpack-xui-base-conf');
 const config = require('../config/xui');
 const utils = require('./utils');
+const rm = require('rimraf');
+
+// 输出目录
+const outputPath = utils.resolve(config.componentsOutputPath);
 
 // 入口
 let entrys = {};
@@ -27,9 +31,14 @@ const webpackConfig = merge(baseConfig.config, {
   entry: entrys,
   output: {
     // 构建输出目录
-    path: utils.resolve(config.componentsOutputPath),
-    libraryTarget: 'commonjs2'
+    path: outputPath,
+    filename: '[name]/index.js',
+    libraryTarget: 'umd',
+    library: '[name]'
   }
 });
 
-baseConfig.build(webpackConfig);
+// 清空目录
+rm(outputPath, () => {
+  baseConfig.build(webpackConfig);
+});

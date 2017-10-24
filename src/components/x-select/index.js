@@ -1,7 +1,7 @@
 import xSelect from './x-select.vue';
 import xOption from './x-option.vue';
 
-export default {
+module.exports = {
   xSelect,
   xOption
 };

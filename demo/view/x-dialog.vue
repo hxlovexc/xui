@@ -23,13 +23,11 @@
       confirm () {
         this.$dialog.confirm('程序员是不是很有意思?', {
           type: 'error'
-        })
-          .then(() => {
-            console.log('确定');
-          })
-          .catch((data) => {
-            console.log('取消');
-          });
+        }, () => {
+          console.log('确定');
+        }, (data) => {
+          console.log('取消');
+        });
       },
       prompt () {
         this.$dialog.prompt({

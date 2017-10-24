@@ -19,7 +19,6 @@ module.exports = {
     "arrow-parens": 0,
     'generator-star-spacing': 0,
     'no-debugger': state,
-    // 'no-console': state,
     "semi": [1, 'always'],
     "no-extra-semi": 2
   }

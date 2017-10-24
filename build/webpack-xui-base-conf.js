@@ -12,7 +12,8 @@ module.exports = {
     output: {
       filename: '[name].js',
       //请求目录
-      publicPath: '/'
+      publicPath: '/',
+      umdNamedDefine: true
     },
     resolve: resolve,
     externals: {
@@ -66,7 +67,7 @@ module.exports = {
   build (buildConfig) {
     // 压缩
     if (process.env.model === 'build') {
-      buildConfig.output.filename = '[name].min.js'
+      buildConfig.output.filename = buildConfig.output.filename.replace('.js', '.min.js');
       buildConfig.plugins.push(
         //压缩代码
         new webpack.optimize.UglifyJsPlugin({
@@ -102,12 +103,6 @@ module.exports = {
       })
     };
 
-    //删除打包文件
-    // console.log(`正在删除 => ${outputPath}`);
-    // rm(outputPath, (err) => {
-      // if (err) console.log(`警告 -> ${outputPath} 目录删除失败,编译后目录下可能存在旧代码`);
-      //执行打包
-      runWebpack();
-    // });
+    runWebpack();
   }
 };

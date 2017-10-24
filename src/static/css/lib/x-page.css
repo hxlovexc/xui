@@ -1,0 +1,140 @@
+@charset "UTF-8";
+/*
+  * @Module: 分页
+ * @Author: 小缘
+ * @Date: 2017-08-06 01:31:41
+ */
+/* base */
+/* 颜色 */
+/* 颜色分类 */
+/* 动画过渡 */
+/* 组件和模块 */
+/* 字体 */
+/* x-quote */
+/* 按钮 */
+/* input */
+/* x-input-group */
+/* textarea */
+/* 计数器 */
+/* checkbox和radio */
+/* 多选和单选按钮组 */
+/* 下拉选择 */
+/* 开关 */
+/* 滑块 */
+/* 表单 */
+/* 选项卡 */
+/* 折叠面板 */
+/* 徽章 */
+/* x-alert和x-notice共用 */
+/* dialog对话框 */
+/* x-dailog和x-model共用*/
+/* toastr */
+/* x-model */
+/* 侧边栏 */
+/* 导航菜单 */
+/* 表格 */
+/* 弹出层 */
+/* 分页 */
+.x-page {
+  display: inline-block;
+  font-size: 0;
+  vertical-align: middle; }
+  .x-page .x-page-list-box,
+  .x-page ul {
+    display: inline-block;
+    vertical-align: middle; }
+  .x-page ul li {
+    display: inline-block;
+    font-size: 14px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    line-height: 1;
+    vertical-align: middle;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative; }
+    .x-page ul li:hover {
+      color: #4399ff;
+      background-color: #f3f7f9; }
+    .x-page ul li.x-page-active {
+      z-index: 9;
+      color: #fff;
+      background: #4399ff;
+      border-color: #4399ff; }
+  .x-page ul .x-page-disabled,
+  .x-page ul .x-page-disabled:hover {
+    color: #ccd5db; }
+  .x-page ul .x-page-disabled:hover {
+    background-color: transparent;
+    cursor: not-allowed; }
+  .x-page ul,
+  .x-page .x-page-input {
+    color: #526069;
+    display: inline-block;
+    vertical-align: middle; }
+  .x-page .x-page-input {
+    padding: 0 10px; }
+    .x-page .x-page-input input {
+      padding: 0 4px;
+      margin: 0 6px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      border: 1px solid #e2e2e2;
+      text-align: center; }
+  .x-page.x-page-large li {
+    padding: 0 13px; }
+  .x-page.x-page-large li,
+  .x-page.x-page-large .x-page-input {
+    height: 34px;
+    line-height: 34px; }
+  .x-page.x-page-large li,
+  .x-page.x-page-large .x-page-input > input,
+  .x-page.x-page-large .x-page-input > span {
+    font-size: 16px; }
+  .x-page.x-page-large .x-page-input input {
+    width: 44.2px;
+    height: 34px; }
+  .x-page.x-page-default li {
+    padding: 0 11px; }
+  .x-page.x-page-default li,
+  .x-page.x-page-default .x-page-input {
+    height: 32px;
+    line-height: 32px; }
+  .x-page.x-page-default li,
+  .x-page.x-page-default .x-page-input > input,
+  .x-page.x-page-default .x-page-input > span {
+    font-size: 13px; }
+  .x-page.x-page-default .x-page-input input {
+    width: 41.6px;
+    height: 32px; }
+  .x-page.x-page-small li {
+    padding: 0 9px; }
+  .x-page.x-page-small li,
+  .x-page.x-page-small .x-page-input {
+    height: 28px;
+    line-height: 28px; }
+  .x-page.x-page-small li,
+  .x-page.x-page-small .x-page-input > input,
+  .x-page.x-page-small .x-page-input > span {
+    font-size: 12px; }
+  .x-page.x-page-small .x-page-input input {
+    width: 36.4px;
+    height: 28px; }
+  .x-page.x-page-border li {
+    border: 1px solid #e2e2e2;
+    margin-left: -1px; }
+  .x-page.x-page-border ul:first-child li:first-child {
+    margin-left: 0; }
+  .x-page.x-page-radius ul:first-child li:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px; }
+  .x-page.x-page-radius ul:last-child li:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px; }
+  .x-page.x-page-radius .x-page-input input {
+    border-radius: 4px; }
+  .x-page.x-page-clearance li {
+    margin: 0 3px; }
+  .x-page.x-page-clearance.x-page-radius li {
+    border-radius: 4px;
+    overflow: hidden; }

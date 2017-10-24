@@ -1,8 +1,9 @@
 import Vue from 'vue';
 import router from './router';
-import xui from '../src/main';
+import xui from '../dist/main.js';
 import './static/demo.scss';
 import 'es6-promise/auto';
+import '../dist/css/xui.css';
 
 Vue.use(xui);
 

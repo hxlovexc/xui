@@ -1,3 +1,3 @@
 import xPopover from './x-popover.js';
 
-export default xPopover;
+module.exports = xPopover;

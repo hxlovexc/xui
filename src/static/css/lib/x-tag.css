@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/*
+ * @Module: 标签
+ * @Author: 小缘
+ * @Date: 2017-07-19 18:45:35
+ */
+/* base */
+/* 颜色 */
+/* 颜色分类 */
+/* 动画过渡 */
+/* 组件和模块 */
+/* 字体 */
+/* x-quote */
+/* 按钮 */
+/* input */
+/* x-input-group */
+/* textarea */
+/* 计数器 */
+/* checkbox和radio */
+/* 多选和单选按钮组 */
+/* 下拉选择 */
+/* 开关 */
+/* 滑块 */
+/* 表单 */
+/* 选项卡 */
+/* 折叠面板 */
+/* 徽章 */
+/* x-alert和x-notice共用 */
+/* dialog对话框 */
+/* x-dailog和x-model共用*/
+/* toastr */
+/* x-model */
+/* 侧边栏 */
+/* 导航菜单 */
+/* 表格 */
+/* 弹出层 */
+/* 分页 */
+.x-tag {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid;
+  line-height: 1; }
+  .x-tag.x-radius {
+    border-radius: 4px; }
+  .x-tag .x-tag-icon {
+    display: inline-block;
+    border-radius: 100%;
+    overflow: hidden;
+    cursor: pointer; }
+    .x-tag .x-tag-icon:hover {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
+  .x-tag .x-tag-icon i,
+  .x-tag span {
+    display: inline-block;
+    vertical-align: middle; }
+  .x-tag.x-tag-large {
+    padding: 4px 7px;
+    font-size: 13px; }
+    .x-tag.x-tag-large .x-tag-icon {
+      width: 15.6px;
+      height: 15.6px; }
+  .x-tag.x-tag-default {
+    padding: 3px 6px;
+    font-size: 12px; }
+    .x-tag.x-tag-default .x-tag-icon {
+      width: 14.4px;
+      height: 14.4px; }
+  .x-tag.x-tag-primary {
+    background: #4399ff;
+    border-color: #4399ff; }
+  .x-tag.x-hollow.x-tag-primary {
+    background: none;
+    color: #4399ff; }
+  .x-tag.x-tag-success {
+    background: #46be8a;
+    border-color: #46be8a; }
+  .x-tag.x-hollow.x-tag-success {
+    background: none;
+    color: #46be8a; }
+  .x-tag.x-tag-warning {
+    background: #f2a654;
+    border-color: #f2a654; }
+  .x-tag.x-hollow.x-tag-warning {
+    background: none;
+    color: #f2a654; }
+  .x-tag.x-tag-danger {
+    background: #f96868;
+    border-color: #f96868; }
+  .x-tag.x-hollow.x-tag-danger {
+    background: none;
+    color: #f96868; }
+  .x-tag.x-tag-dark {
+    background: #37474f;
+    border-color: #37474f; }
+  .x-tag.x-hollow.x-tag-dark {
+    background: none;
+    color: #37474f; }
+
+.fade-enter-active,
+.fade-leave-active {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0; }

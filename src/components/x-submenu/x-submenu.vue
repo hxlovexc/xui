@@ -2,7 +2,8 @@
   <li
     class="x-submenu"
     :class="{
-      'x-show-submenu': show
+      'x-show-submenu': show,
+      'x-menu-active': isActive
     }"
     @mouseenter="mouseShow"
     @mouseleave="mouseHide"
@@ -36,13 +37,28 @@
   import { parent } from '../../utils/query-components';
 
   export default {
+    name: 'x-submenu',
+    props: {
+      name: {
+        type: [String, Number],
+        default: ''
+      },
+      active: {
+        type: [String, Number],
+        default: ''
+      }
+    },
     data () {
       return {
         show: false,
-        parent: parent.call(this, 'x-menu')
+        parent: parent.call(this, 'x-menu'),
+        curActive: this.active
       };
     },
     computed: {
+      isActive () {
+        return this.$parent.curActive && this.$parent.curActive === this.name;
+      },
       isLevel () {
         return this.parent.mode === 'level';
       }
@@ -51,6 +67,9 @@
       mouseShow () {
         if (!this.isLevel) return;
         this.showMenu();
+      },
+      selected (key) {
+        this.curActive = key;
       },
       mouseHide () {
         if (!this.isLevel) return;

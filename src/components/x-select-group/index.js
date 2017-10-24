@@ -1,3 +1,3 @@
 import xSelectGroup from './x-select-group.vue';
 
-export default xSelectGroup;
+module.exports = xSelectGroup;

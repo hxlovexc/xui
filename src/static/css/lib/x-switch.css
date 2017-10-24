@@ -1,0 +1,200 @@
+@charset "UTF-8";
+/*
+  * @Module: 开关
+ * @Author: 小缘
+ * @Date: 2017-06-19 23:12:35
+ */
+/* base */
+/* 颜色 */
+/* 颜色分类 */
+/* 动画过渡 */
+/* 组件和模块 */
+/* 字体 */
+/* x-quote */
+/* 按钮 */
+/* input */
+/* x-input-group */
+/* textarea */
+/* 计数器 */
+/* checkbox和radio */
+/* 多选和单选按钮组 */
+/* 下拉选择 */
+/* 开关 */
+/* 滑块 */
+/* 表单 */
+/* 选项卡 */
+/* 折叠面板 */
+/* 徽章 */
+/* x-alert和x-notice共用 */
+/* dialog对话框 */
+/* x-dailog和x-model共用*/
+/* toastr */
+/* x-model */
+/* 侧边栏 */
+/* 导航菜单 */
+/* 表格 */
+/* 弹出层 */
+/* 分页 */
+.x-switch {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  cursor: pointer;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 20px;
+  -webkit-transition: background 0.25s ease-in-out, border-color 0.25s ease-in-out;
+  transition: background 0.25s ease-in-out, border-color 0.25s ease-in-out; }
+  .x-switch + .x-switch {
+    margin-left: 15px; }
+  .x-switch i {
+    position: absolute;
+    border-radius: 20px;
+    left: 3px;
+    background: #d2d2d2;
+    -webkit-transition: background 0.25s ease-in-out, width 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+    transition: background 0.25s ease-in-out, width 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+    transition: background 0.25s ease-in-out, transform 0.25s ease-in-out, width 0.25s ease-in-out;
+    transition: background 0.25s ease-in-out, transform 0.25s ease-in-out, width 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out; }
+  .x-switch .x-switch-label {
+    display: block;
+    color: #d2d2d2;
+    padding-right: 3px;
+    -webkit-transition: color 0.25s ease-in-out;
+    transition: color 0.25s ease-in-out;
+    text-align: center; }
+  .x-switch i,
+  .x-switch .x-switch-label {
+    vertical-align: middle; }
+  .x-switch.x-disabled {
+    background: #f3f7f9 !important;
+    border-color: #E4EAEC !important; }
+    .x-switch.x-disabled i {
+      opacity: 0.7 !important;
+      background: #d2d2d2 !important; }
+    .x-switch.x-disabled .x-switch-label {
+      color: #a3afb7 !important; }
+
+.x-switch-large {
+  width: 65px;
+  height: 30px; }
+  .x-switch-large i {
+    top: 2px;
+    width: 24px;
+    height: 24px; }
+  .x-switch-large .x-switch-label {
+    line-height: 28px;
+    font-size: 14px;
+    padding-left: 30px; }
+  .x-switch-large.x-switch-open i {
+    -webkit-transform: translateX(33px);
+            transform: translateX(33px);
+    background: #fff; }
+  .x-switch-large.x-switch-open .x-switch-label {
+    padding-left: 3px;
+    padding-right: 30px;
+    color: #fff; }
+  .x-switch-large.x-switch-open.x-switch-primary {
+    background: #4399ff;
+    border-color: #4399ff; }
+  .x-switch-large.x-switch-open.x-switch-success {
+    background: #46be8a;
+    border-color: #46be8a; }
+  .x-switch-large.x-switch-open.x-switch-warning {
+    background: #f2a654;
+    border-color: #f2a654; }
+  .x-switch-large.x-switch-open.x-switch-danger {
+    background: #f96868;
+    border-color: #f96868; }
+  .x-switch-large.x-switch-open.x-switch-dark {
+    background: #37474f;
+    border-color: #37474f; }
+  .x-switch-large.x-switch-open:active i {
+    -webkit-transform: translateX(25px);
+            transform: translateX(25px); }
+  .x-switch-large:active i {
+    width: 32px; }
+
+.x-switch-default {
+  width: 56px;
+  height: 24px; }
+  .x-switch-default i {
+    top: 2px;
+    width: 18px;
+    height: 18px; }
+  .x-switch-default .x-switch-label {
+    line-height: 22px;
+    font-size: 12px;
+    padding-left: 24px; }
+  .x-switch-default.x-switch-open i {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+    background: #fff; }
+  .x-switch-default.x-switch-open .x-switch-label {
+    padding-left: 3px;
+    padding-right: 24px;
+    color: #fff; }
+  .x-switch-default.x-switch-open.x-switch-primary {
+    background: #4399ff;
+    border-color: #4399ff; }
+  .x-switch-default.x-switch-open.x-switch-success {
+    background: #46be8a;
+    border-color: #46be8a; }
+  .x-switch-default.x-switch-open.x-switch-warning {
+    background: #f2a654;
+    border-color: #f2a654; }
+  .x-switch-default.x-switch-open.x-switch-danger {
+    background: #f96868;
+    border-color: #f96868; }
+  .x-switch-default.x-switch-open.x-switch-dark {
+    background: #37474f;
+    border-color: #37474f; }
+  .x-switch-default.x-switch-open:active i {
+    -webkit-transform: translateX(22px);
+            transform: translateX(22px); }
+  .x-switch-default:active i {
+    width: 26px; }
+
+.x-switch-small {
+  width: 40px;
+  height: 20px; }
+  .x-switch-small i {
+    top: 2px;
+    width: 14px;
+    height: 14px; }
+  .x-switch-small .x-switch-label {
+    line-height: 18px;
+    font-size: 12px;
+    padding-left: 20px; }
+  .x-switch-small.x-switch-open i {
+    -webkit-transform: translateX(18px);
+            transform: translateX(18px);
+    background: #fff; }
+  .x-switch-small.x-switch-open .x-switch-label {
+    padding-left: 3px;
+    padding-right: 20px;
+    color: #fff; }
+  .x-switch-small.x-switch-open.x-switch-primary {
+    background: #4399ff;
+    border-color: #4399ff; }
+  .x-switch-small.x-switch-open.x-switch-success {
+    background: #46be8a;
+    border-color: #46be8a; }
+  .x-switch-small.x-switch-open.x-switch-warning {
+    background: #f2a654;
+    border-color: #f2a654; }
+  .x-switch-small.x-switch-open.x-switch-danger {
+    background: #f96868;
+    border-color: #f96868; }
+  .x-switch-small.x-switch-open.x-switch-dark {
+    background: #37474f;
+    border-color: #37474f; }
+  .x-switch-small.x-switch-open:active i {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px); }
+  .x-switch-small:active i {
+    width: 22px; }

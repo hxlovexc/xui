@@ -1,3 +1,3 @@
 import xBadge from './x-badge.vue';
 
-export default xBadge;
+module.exports = xBadge;

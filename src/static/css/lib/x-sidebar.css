@@ -1,0 +1,85 @@
+@charset "UTF-8";
+/*
+  * @Module: 侧边栏
+ * @Author: 小缘
+ * @Date: 2017-07-29 10:16:28
+ */
+/* base */
+/* 颜色 */
+/* 颜色分类 */
+/* 动画过渡 */
+/* 组件和模块 */
+/* 字体 */
+/* x-quote */
+/* 按钮 */
+/* input */
+/* x-input-group */
+/* textarea */
+/* 计数器 */
+/* checkbox和radio */
+/* 多选和单选按钮组 */
+/* 下拉选择 */
+/* 开关 */
+/* 滑块 */
+/* 表单 */
+/* 选项卡 */
+/* 折叠面板 */
+/* 徽章 */
+/* x-alert和x-notice共用 */
+/* dialog对话框 */
+/* x-dailog和x-model共用*/
+/* toastr */
+/* x-model */
+/* 侧边栏 */
+/* 导航菜单 */
+/* 表格 */
+/* 弹出层 */
+/* 分页 */
+.x-sidebar .x-mask {
+  opacity: 0.6; }
+
+.x-sidebar .x-sidebar-content {
+  position: fixed;
+  background-color: #fff;
+  z-index: 2017;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  top: 0; }
+
+.x-sidebar .x-sidebar-left {
+  left: 0; }
+
+.x-sidebar .x-sidebar-right {
+  right: 0; }
+
+.x-sidebar-animate-enter-active,
+.x-sidebar-animate-leave-active {
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s; }
+  .x-sidebar-animate-enter-active .x-mask,
+  .x-sidebar-animate-leave-active .x-mask {
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s; }
+  .x-sidebar-animate-enter-active .x-sidebar-content,
+  .x-sidebar-animate-leave-active .x-sidebar-content {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: opacity 0.35s, -webkit-transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.35s;
+    transition: transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.35s, -webkit-transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+.x-sidebar-animate-enter .x-mask,
+.x-sidebar-animate-leave-to .x-mask
+.x-sidebar-animate-enter .x-sidebar-content,
+.x-sidebar-animate-leave-to .x-sidebar-content {
+  opacity: 0; }
+
+.x-sidebar-animate-enter .x-sidebar-left,
+.x-sidebar-animate-leave-to .x-sidebar-left {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%); }
+
+.x-sidebar-animate-enter .x-sidebar-right,
+.x-sidebar-animate-leave-to .x-sidebar-right {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%); }

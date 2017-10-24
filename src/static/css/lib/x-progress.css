@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/*
+  * @Module: 进度条
+ * @Author: 小缘
+ * @Date: 2017-07-16 23:14:24
+ */
+/* base */
+/* 颜色 */
+/* 颜色分类 */
+/* 动画过渡 */
+/* 组件和模块 */
+/* 字体 */
+/* x-quote */
+/* 按钮 */
+/* input */
+/* x-input-group */
+/* textarea */
+/* 计数器 */
+/* checkbox和radio */
+/* 多选和单选按钮组 */
+/* 下拉选择 */
+/* 开关 */
+/* 滑块 */
+/* 表单 */
+/* 选项卡 */
+/* 折叠面板 */
+/* 徽章 */
+/* x-alert和x-notice共用 */
+/* dialog对话框 */
+/* x-dailog和x-model共用*/
+/* toastr */
+/* x-model */
+/* 侧边栏 */
+/* 导航菜单 */
+/* 表格 */
+/* 弹出层 */
+/* 分页 */
+.x-progress {
+  display: block;
+  background: #e4eaec;
+  position: relative; }
+  .x-progress .x-progress-bar {
+    height: 100%;
+    -webkit-transition: width 0.3s;
+    transition: width 0.3s; }
+  .x-progress .x-radius,
+  .x-progress .x-radius .x-progress-bar {
+    overflow: hidden;
+    border-radius: 100px; }
+
+.x-progress-large {
+  height: 12px; }
+
+.x-progress-default {
+  height: 8px; }
+
+.x-progress-small {
+  height: 5px; }
+
+.x-progress-primary .x-progress-bar {
+  background: #4399ff; }
+  .x-progress-primary .x-progress-bar::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    background-color: #fff;
+    -webkit-animation: progress-active-animate 3s ease 0s infinite;
+            animation: progress-active-animate 3s ease 0s infinite; }
+
+.x-progress-success .x-progress-bar {
+  background: #46be8a; }
+  .x-progress-success .x-progress-bar::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    background-color: #fff;
+    -webkit-animation: progress-active-animate 3s ease 0s infinite;
+            animation: progress-active-animate 3s ease 0s infinite; }
+
+.x-progress-warning .x-progress-bar {
+  background: #f2a654; }
+  .x-progress-warning .x-progress-bar::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    background-color: #fff;
+    -webkit-animation: progress-active-animate 3s ease 0s infinite;
+            animation: progress-active-animate 3s ease 0s infinite; }
+
+.x-progress-danger .x-progress-bar {
+  background: #f96868; }
+  .x-progress-danger .x-progress-bar::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    background-color: #fff;
+    -webkit-animation: progress-active-animate 3s ease 0s infinite;
+            animation: progress-active-animate 3s ease 0s infinite; }
+
+.x-progress-dark .x-progress-bar {
+  background: #37474f; }
+  .x-progress-dark .x-progress-bar::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    background-color: #fff;
+    -webkit-animation: progress-active-animate 3s ease 0s infinite;
+            animation: progress-active-animate 3s ease 0s infinite; }
+
+@-webkit-keyframes progress-active-animate {
+  0% {
+    width: 0;
+    opacity: 0.3; }
+  100% {
+    width: 100%;
+    opacity: 0; } }
+
+@keyframes progress-active-animate {
+  0% {
+    width: 0;
+    opacity: 0.3; }
+  100% {
+    width: 100%;
+    opacity: 0; } }
+
+.x-progress-circle-box {
+  display: inline-block;
+  vertical-align: middle;
+  width: 110px;
+  height: 110px; }
+  .x-progress-circle-box .x-progress-circle {
+    position: relative;
+    width: 100%;
+    height: 100%; }
+  .x-progress-circle-box .x-progress-circle-text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; }
+    .x-progress-circle-box .x-progress-circle-text::after,
+    .x-progress-circle-box .x-progress-circle-text span {
+      display: inline-block;
+      vertical-align: middle; }
+    .x-progress-circle-box .x-progress-circle-text span {
+      width: 100%; }
+    .x-progress-circle-box .x-progress-circle-text::after {
+      content: '';
+      height: 100%; }
+    .x-progress-circle-box .x-progress-circle-text .x-progress-text {
+      display: block;
+      text-align: center;
+      font-size: 20px;
+      line-height: 1; }

@@ -26,7 +26,7 @@
         default: 'primary'
       },
       active: {
-        type: String,
+        type: [String, Number],
         default: ''
       },
       mode: {
@@ -36,13 +36,13 @@
     },
     data () {
       return {
-        curActive: ''
+        curActive: this.active
       };
     },
     methods: {
-      selected (key, path) {
+      selected (key) {
         this.curActive = key;
-        this.$emit('select', key, path);
+        this.$emit('select', key);
       }
     }
   };

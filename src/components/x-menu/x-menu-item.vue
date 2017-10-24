@@ -1,9 +1,9 @@
 <template>
   <li
     class="x-meun-item"
-    :class="{
-      'x-menu-active': active
-    }"
+    :class="[
+      active && (isSub ? 'x-submenu-active' : 'x-menu-active')
+    ]"
     @click="menuClick"
   >
     <div class="x-menu-item-title">
@@ -18,10 +18,6 @@
       name: {
         type: [String, Number],
         default: ''
-      },
-      path: {
-        type: String,
-        default: ''
       }
     },
     data () {
@@ -29,12 +25,23 @@
     },
     methods: {
       menuClick () {
-        this.$parent.selected(this.name, this.path);
+        if (this.isSub) {
+          this.parent.selected(this.name);
+          this.$parent.selected(this.name);
+        } else {
+          this.parent.selected(this.name);
+        }
       }
     },
     computed: {
       active () {
-        return this.$parent.curActive && this.$parent.curActive === this.name;
+        return this.$parent.curActive === this.name;
+      },
+      isSub () {
+        return this.$parent.$options.name === 'x-submenu';
+      },
+      parent () {
+        return this.isSub ? this.$parent.$parent : this.$parent;
       }
     }
   };

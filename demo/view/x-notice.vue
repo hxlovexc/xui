@@ -74,11 +74,7 @@
           timer: timer,
           title: title,
           showClose: closeButton
-        }, (vm) => {
-          vm.close();
-        }, () => {
-          console.log('关闭');
-        });
+        }, null, null);
       },
       shownotice (name) {
         index++;

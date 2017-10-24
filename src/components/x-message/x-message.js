@@ -41,30 +41,31 @@ function createMessage (message, options, close) {
   const name = `x-message-${Date.now()}`;
   // 第一个参数必须为字符串
   const messageType = typeof message;
-  if (messageType !== 'string' || messageType !== 'number') {
-    return console.error('xui -> (x-message组件) : 第一个参数必须为字符串或者数字');
+  if (messageType === 'string' || messageType === 'number') {
+    // 判断options是否存在
+    if (typeof options === 'function') {
+      close = options;
+      options = {};
+    }
+    // 禁止重复创建
+    if (instance === '') {
+      initInstance();
+    }
+    showNotice(Object.assign({}, defaultConfig, options, {
+      type,
+      close,
+      message,
+      name
+    }));
+    // 清空
+    type = null;
+    // 关闭
+    return () => {
+      instance.close(name);
+    };
+  } else {
+    console.error('xui -> (x-message组件) : 第一个参数必须为字符串或者数字');
   }
-  // 判断options是否存在
-  if (typeof options === 'function') {
-    close = options;
-    options = {};
-  }
-  // 禁止重复创建
-  if (instance === '') {
-    initInstance();
-  }
-  showNotice(Object.assign({}, defaultConfig, options, {
-    type,
-    close,
-    message,
-    name
-  }));
-  // 清空
-  type = null;
-  // 关闭
-  return () => {
-    instance.close(name);
-  };
 }
 
 types.forEach((item) => {
@@ -82,4 +83,3 @@ message.closeAll = () => {
 export default function message () {
   return createMessage.apply(this, arguments);
 }
-

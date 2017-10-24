@@ -134,4 +134,4 @@ if (typeof window !== 'undefined' && window.Vue) {
   xui.install = install;
 }
 
-export default xui;
+module.exports = xui;

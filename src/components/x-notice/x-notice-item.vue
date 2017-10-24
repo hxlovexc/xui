@@ -1,5 +1,5 @@
 <template>
-  <transition name="x-notice-let-move">
+  <transition name="x-notice-left-move">
     <div
       class="x-notice"
       :class="[

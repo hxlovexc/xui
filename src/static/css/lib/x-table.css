@@ -1,0 +1,126 @@
+@charset "UTF-8";
+/*
+  * @Module: 表格
+ * @Author: 小缘
+ * @Date: 2017-07-30 13:09:18
+ */
+/* base */
+/* 颜色 */
+/* 颜色分类 */
+/* 动画过渡 */
+/* 组件和模块 */
+/* 字体 */
+/* x-quote */
+/* 按钮 */
+/* input */
+/* x-input-group */
+/* textarea */
+/* 计数器 */
+/* checkbox和radio */
+/* 多选和单选按钮组 */
+/* 下拉选择 */
+/* 开关 */
+/* 滑块 */
+/* 表单 */
+/* 选项卡 */
+/* 折叠面板 */
+/* 徽章 */
+/* x-alert和x-notice共用 */
+/* dialog对话框 */
+/* x-dailog和x-model共用*/
+/* toastr */
+/* x-model */
+/* 侧边栏 */
+/* 导航菜单 */
+/* 表格 */
+/* 弹出层 */
+/* 分页 */
+.x-table-box {
+  display: block;
+  background: #fff; }
+  .x-table-box .x-table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    color: #76838f; }
+    .x-table-box .x-table thead > tr > th {
+      font-weight: bold; }
+      .x-table-box .x-table thead > tr > th > span,
+      .x-table-box .x-table thead > tr > th > div {
+        display: inline-block;
+        vertical-align: middle; }
+    .x-table-box .x-table thead .x-table-sort {
+      height: 100%;
+      padding-left: 5px; }
+      .x-table-box .x-table thead .x-table-sort span {
+        display: block;
+        line-height: 1;
+        font-size: 14px;
+        overflow: hidden;
+        cursor: pointer;
+        opacity: 0.6;
+        -webkit-transition: opacity 0.1s;
+        transition: opacity 0.1s;
+        position: relative;
+        z-index: 1; }
+        .x-table-box .x-table thead .x-table-sort span:first-child {
+          margin-top: 4px; }
+        .x-table-box .x-table thead .x-table-sort span:last-child {
+          margin-top: -4px; }
+        .x-table-box .x-table thead .x-table-sort span.sort-active, .x-table-box .x-table thead .x-table-sort span:hover {
+          opacity: 1;
+          z-index: 99; }
+    .x-table-box .x-table th,
+    .x-table-box .x-table td {
+      line-height: 1.5;
+      vertical-align: middle;
+      text-align: inherit; }
+      .x-table-box .x-table th > div,
+      .x-table-box .x-table td > div {
+        position: relative; }
+    .x-table-box .x-table thead th {
+      background: #f5f5f5;
+      border-bottom: 1px solid #e4eaec; }
+    .x-table-box .x-table tbody tr {
+      -webkit-transition: background 0.1s;
+      transition: background 0.1s; }
+      .x-table-box .x-table tbody tr td {
+        border-top: 1px solid #e4eaec; }
+  .x-table-box .x-table-body {
+    width: 100%;
+    position: relative;
+    overflow: auto; }
+  .x-table-box .x-table-scroll-body tbody tr:first-child td {
+    border-top: none; }
+  .x-table-box.x-table-large th,
+  .x-table-box.x-table-large td {
+    padding: 10px 14px;
+    font-size: 16px; }
+  .x-table-box.x-table-default th,
+  .x-table-box.x-table-default td {
+    padding: 8px 14px;
+    font-size: 14px; }
+  .x-table-box.x-table-small th,
+  .x-table-box.x-table-small td {
+    padding: 6px 14px;
+    font-size: 12px; }
+  .x-table-box.x-table-bordered tbody > tr > td,
+  .x-table-box.x-table-bordered thead > tr:first-child > th {
+    border: 1px solid #e4eaec; }
+  .x-table-box.no-border tr > td,
+  .x-table-box.no-border tr > th {
+    border: none !important; }
+  .x-table-box.x-table-hover tr:hover {
+    background: #f6fafe; }
+  .x-table-box.x-table-striped tr:nth-child(even) {
+    background-color: #fbfbfb; }
+  .x-table-box .x-table-header {
+    background-color: #f5f5f5; }
+    .x-table-box .x-table-header th {
+      border-bottom: none; }
+
+.x-table-fixed-head.x-table-bordered {
+  overflow: hidden;
+  border-bottom: 1px solid #e4eaec; }
+  .x-table-fixed-head.x-table-bordered tr:last-child td {
+    border-bottom: none; }

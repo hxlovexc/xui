@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/*
+  * @Module: 选项卡
+ * @Author: 小缘
+ * @Date: 2017-07-15 17:40:58
+ */
+/* base */
+/* 颜色 */
+/* 颜色分类 */
+/* 动画过渡 */
+/* 组件和模块 */
+/* 字体 */
+/* x-quote */
+/* 按钮 */
+/* input */
+/* x-input-group */
+/* textarea */
+/* 计数器 */
+/* checkbox和radio */
+/* 多选和单选按钮组 */
+/* 下拉选择 */
+/* 开关 */
+/* 滑块 */
+/* 表单 */
+/* 选项卡 */
+/* 折叠面板 */
+/* 徽章 */
+/* x-alert和x-notice共用 */
+/* dialog对话框 */
+/* x-dailog和x-model共用*/
+/* toastr */
+/* x-model */
+/* 侧边栏 */
+/* 导航菜单 */
+/* 表格 */
+/* 弹出层 */
+/* 分页 */
+.x-tabs-box {
+  background: #fff; }
+  .x-tabs-box .x-tabs-nav {
+    font-size: 0;
+    display: block;
+    border-bottom: 1px solid #e2e2e2; }
+    .x-tabs-box .x-tabs-nav li {
+      font-size: 14px;
+      color: #3f536e;
+      display: inline-block;
+      vertical-align: middle;
+      height: 40px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      line-height: 40px;
+      text-align: center;
+      padding: 0 12px;
+      cursor: pointer; }
+      .x-tabs-box .x-tabs-nav li .x-tabs-remove-btn {
+        position: relative;
+        display: inline-block;
+        height: 100%;
+        width: 18px;
+        vertical-align: middle;
+        padding-left: 5px; }
+        .x-tabs-box .x-tabs-nav li .x-tabs-remove-btn > i {
+          width: 18px;
+          height: 18px;
+          line-height: 1;
+          font-size: 18px;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          margin-top: -10px; }
+  .x-tabs-box .x-tabs-content {
+    width: 100%;
+    padding: 12px; }
+
+.x-tabs-default .x-tabs-nav {
+  position: relative; }
+  .x-tabs-default .x-tabs-nav li {
+    -webkit-transition: color 0.3s, border 0.3s;
+    transition: color 0.3s, border 0.3s; }
+    .x-tabs-default .x-tabs-nav li:hover {
+      color: #4399ff; }
+    .x-tabs-default .x-tabs-nav li.x-tabs-nav-active {
+      color: #4399ff; }
+  .x-tabs-default .x-tabs-nav .x-tabs-active-bar {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 2px;
+    background: #4399ff;
+    -webkit-transition: width 0.3s, -webkit-transform 0.3s;
+    transition: width 0.3s, -webkit-transform 0.3s;
+    transition: width 0.3s, transform 0.3s;
+    transition: width 0.3s, transform 0.3s, -webkit-transform 0.3s; }
+  .x-tabs-default .x-tabs-nav .x-disabled,
+  .x-tabs-default .x-tabs-nav .x-disabled:hover {
+    color: #a3afb7; }
+
+.x-tabs-card {
+  border: 1px solid #e2e2e2; }
+  .x-tabs-card .x-tabs-nav {
+    background: #f5f5f5; }
+    .x-tabs-card .x-tabs-nav .x-tabs-nav-active {
+      position: relative;
+      background: #fff; }
+      .x-tabs-card .x-tabs-nav .x-tabs-nav-active::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 41px;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        border: 1px solid #e2e2e2;
+        border-top-color: #fff;
+        border-bottom-color: #fff; }
+    .x-tabs-card .x-tabs-nav li:first-child::after {
+      border-left: none; }
+    .x-tabs-card .x-tabs-nav .x-disabled,
+    .x-tabs-card .x-tabs-nav .x-disabled:hover {
+      color: #a3afb7; }

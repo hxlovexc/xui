@@ -1,0 +1,144 @@
+@charset "UTF-8";
+/*
+  * @Module: 弹出框
+ * @Author: 小缘
+ * @Date: 2017-09-08 23:11:59
+ */
+/* base */
+/* 颜色 */
+/* 颜色分类 */
+/* 动画过渡 */
+/* 组件和模块 */
+/* 字体 */
+/* x-quote */
+/* 按钮 */
+/* input */
+/* x-input-group */
+/* textarea */
+/* 计数器 */
+/* checkbox和radio */
+/* 多选和单选按钮组 */
+/* 下拉选择 */
+/* 开关 */
+/* 滑块 */
+/* 表单 */
+/* 选项卡 */
+/* 折叠面板 */
+/* 徽章 */
+/* x-alert和x-notice共用 */
+/* dialog对话框 */
+/* x-dailog和x-model共用*/
+/* toastr */
+/* x-model */
+/* 侧边栏 */
+/* 导航菜单 */
+/* 表格 */
+/* 弹出层 */
+/* 分页 */
+/*
+  * @Module: 三槐
+ * @Author: 小缘
+ * @Date: 2017-09-08 23:16:36
+ */
+.x-popover-box {
+  display: inline-block; }
+
+.x-popover {
+  position: absolute;
+  display: inline-block;
+  z-index: 999; }
+  .x-popover .x-popover-text {
+    border: 1px solid rgba(204, 213, 219, 0.8);
+    background: #fff;
+    padding: 10px 10px;
+    min-width: 160px;
+    max-width: 280px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.11);
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.11); }
+    .x-popover .x-popover-text .x-popover-title {
+      color: #333;
+      font-size: 14px;
+      padding-bottom: 8px;
+      line-height: 1; }
+    .x-popover .x-popover-text .x-popover-content {
+      color: #3f536e;
+      font-size: 13px; }
+  .x-popover.x-popover .arrow {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid; }
+    .x-popover.x-popover .arrow:after {
+      content: "";
+      border-width: 5px;
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      border-color: transparent;
+      border-style: solid; }
+  .x-popover.x-popover-top {
+    padding-bottom: 10px; }
+    .x-popover.x-popover-top .arrow {
+      top: 100%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -10px);
+              transform: translate(-50%, -10px);
+      border-width: 5px 5px 0;
+      border-top-color: rgba(204, 213, 219, 0.8); }
+      .x-popover.x-popover-top .arrow:after {
+        bottom: 1px;
+        margin-left: -5px;
+        content: '';
+        border-top-color: #fff;
+        border-bottom-width: 0; }
+  .x-popover.x-popover-bottom {
+    padding-top: 10px;
+    top: 0; }
+    .x-popover.x-popover-bottom .arrow {
+      top: 0;
+      left: 50%;
+      margin-top: 5px;
+      margin-left: -5px;
+      border-width: 0 5px 5px;
+      border-bottom-color: rgba(204, 213, 219, 0.8); }
+      .x-popover.x-popover-bottom .arrow:after {
+        top: 1px;
+        margin-left: -5px;
+        content: " ";
+        border-top-width: 0;
+        border-bottom-color: #fff; }
+  .x-popover.x-popover-left {
+    padding-right: 10px; }
+    .x-popover.x-popover-left .arrow {
+      top: 50%;
+      left: 100%;
+      -webkit-transform: translate(-10px, -50%);
+              transform: translate(-10px, -50%);
+      border-width: 5px 0 5px 5px;
+      border-left-color: rgba(204, 213, 219, 0.8); }
+      .x-popover.x-popover-left .arrow:after {
+        right: 1px;
+        bottom: -5px;
+        content: " ";
+        border-right-width: 0;
+        border-left-color: #fff; }
+  .x-popover.x-popover-right {
+    padding-left: 10px; }
+    .x-popover.x-popover-right .arrow {
+      top: 50%;
+      left: 10px;
+      -webkit-transform: translate(-100%, -50%);
+              transform: translate(-100%, -50%);
+      border-width: 5px 5px 5px 0;
+      border-right-color: rgba(204, 213, 219, 0.8); }
+      .x-popover.x-popover-right .arrow:after {
+        bottom: -5px;
+        left: 1px;
+        content: " ";
+        border-right-color: #fff;
+        border-left-width: 0; }

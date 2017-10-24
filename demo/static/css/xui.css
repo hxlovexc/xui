@@ -31,6 +31,7 @@
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -66,6 +67,7 @@
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -252,6 +254,7 @@ body {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -385,6 +388,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -446,6 +450,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -481,6 +486,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -682,6 +688,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -748,6 +755,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -783,6 +791,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -818,6 +827,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -836,7 +846,8 @@ h6 {
 .x-input-box {
   position: relative; }
   .x-input-box .x-input {
-    background: #fff; }
+    background: #fff;
+    display: block; }
   .x-input-box.x-input-radius .x-input {
     border-radius: 4px; }
 
@@ -934,7 +945,6 @@ h6 {
     color: #37474f; }
 
 .x-inline .x-input {
-  display: inline-block;
   width: 200px; }
 
 .x-input-group {
@@ -1017,6 +1027,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -1052,6 +1063,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -1087,6 +1099,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -1200,6 +1213,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -1371,6 +1385,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -1406,6 +1421,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -1441,6 +1457,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -1599,6 +1616,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -1729,6 +1747,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -1854,6 +1873,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -1889,6 +1909,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -1924,6 +1945,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -3881,6 +3903,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -3952,7 +3975,7 @@ h6 {
     box-sizing: border-box;
     min-width: 100%;
     border: 1px solid;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
     margin-top: 4px;
     padding: 2px 0;
     border-color: #e2e2e2;
@@ -4103,6 +4126,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -4290,6 +4314,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -4402,6 +4427,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -4520,6 +4546,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -4635,6 +4662,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -4672,6 +4700,37 @@ h6 {
  * @Author: 小缘
  * @Date: 2017-07-16 23:14:24
  */
+/* base */
+/* 颜色 */
+/* 颜色分类 */
+/* 动画过渡 */
+/* 组件和模块 */
+/* 字体 */
+/* x-quote */
+/* 按钮 */
+/* input */
+/* x-input-group */
+/* textarea */
+/* 计数器 */
+/* checkbox和radio */
+/* 多选和单选按钮组 */
+/* 下拉选择 */
+/* 开关 */
+/* 滑块 */
+/* 表单 */
+/* 选项卡 */
+/* 折叠面板 */
+/* 徽章 */
+/* x-alert和x-notice共用 */
+/* dialog对话框 */
+/* x-dailog和x-model共用*/
+/* toastr */
+/* x-model */
+/* 侧边栏 */
+/* 导航菜单 */
+/* 表格 */
+/* 弹出层 */
+/* 分页 */
 .x-progress {
   display: block;
   background: #e4eaec;
@@ -4813,6 +4872,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -4874,6 +4934,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -4981,6 +5042,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -5016,6 +5078,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -5108,6 +5171,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -5143,6 +5207,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -5284,6 +5349,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -5319,6 +5385,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -5415,6 +5482,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -5450,6 +5518,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -5567,6 +5636,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -5643,6 +5713,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -5651,208 +5722,203 @@ h6 {
   position: relative; }
   .x-menu .x-menu-list > li {
     display: block;
-    cursor: pointer;
-    font-size: 14px; }
-    .x-menu .x-menu-list > li > i {
+    cursor: pointer; }
+    .x-menu .x-menu-list > li .x-menu-item-title > i {
       margin-right: 3px; }
+    .x-menu .x-menu-list > li .x-subment-icon i {
+      display: inline-block;
+      transition: transform 0.2s; }
+  .x-menu .x-menu-list .x-show-submenu > .x-menu-item-title .x-subment-icon i {
+    transform: rotate(180deg); }
+  .x-menu .x-menu-list .x-menu-item-title {
+    font-size: 14px; }
+  .x-menu.x-menu-level .x-submenu-box .x-menu-item-title, .x-menu.x-menu-baise .x-menu-item-title {
+    transition: color 0.1s; }
   .x-menu.x-menu-baise {
     background: #fff; }
-    .x-menu.x-menu-baise .x-menu-list > li {
-      position: relative; }
-      .x-menu.x-menu-baise .x-menu-list > li::after {
-        content: '';
-        display: block;
-        position: absolute;
-        transition: transform .15s;
-        z-index: 999;
-        background-color: #4399ff; }
-    .x-menu.x-menu-baise .x-menu-active,
-    .x-menu.x-menu-baise .x-menu-list > li:hover {
-      color: #4399ff; }
-  .x-menu .x-submenu .x-submenu-title,
-  .x-menu .x-submenu .x-subment-icon,
-  .x-menu .x-submenu .x-subment-icon i {
-    display: inline-block;
-    vertical-align: top; }
-  .x-menu .x-submenu .x-subment-icon {
-    overflow: hidden; }
-    .x-menu .x-submenu .x-subment-icon i {
-      transition: transform 0.3s; }
-  .x-menu .x-submenu.x-show-submenu .x-subment-icon i {
-    transform: rotate(180deg); }
 
-.x-menu-level .x-submenu-box ul,
-.x-menu-vertical.x-menu-baise .x-submenu-box ul {
-  color: #37474f; }
+.x-menu-baise .x-menu-active > .x-menu-item-title,
+.x-menu-baise .x-menu-item-title:hover,
+.x-menu-baise .x-menu-active .x-submenu-active,
+.x-menu-level .x-menu-active .x-submenu-active {
+  color: #4399ff; }
 
-.x-menu-level .x-menu-list > li {
-  height: 50px;
-  line-height: 50px;
-  float: left; }
-  .x-menu-level .x-menu-list > li > .x-menu-item-title {
-    padding: 0 16px; }
-  .x-menu-level .x-menu-list > li::after {
-    width: 0;
-    transform: scaleX(0); }
+.x-menu .x-menu-active .x-menu-item-title,
+.x-menu-baise .x-menu-active .x-submenu-active .x-menu-item-title {
+  opacity: 1; }
 
-.x-menu-level .x-menu-list .x-submenu {
-  position: relative; }
-  .x-menu-level .x-menu-list .x-submenu .x-submenu-title {
-    padding-right: 5px; }
-  .x-menu-level .x-menu-list .x-submenu .x-submenu-box {
-    z-index: 999;
-    min-width: 100%;
-    padding-top: 5px;
-    position: absolute;
-    top: 100%;
-    left: 0; }
-    .x-menu-level .x-menu-list .x-submenu .x-submenu-box ul {
-      padding: 5px 0;
-      background: #fff;
-      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
-      border-radius: 3px;
-      overflow: hidden; }
-      .x-menu-level .x-menu-list .x-submenu .x-submenu-box ul li {
-        white-space: nowrap;
-        padding: 9px 16px;
-        line-height: 1.4; }
-        .x-menu-level .x-menu-list .x-submenu .x-submenu-box ul li:hover {
-          color: #4399ff; }
+.x-menu-level {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  border-color: #e4eaec; }
+  .x-menu-level .x-menu-list > li {
+    height: 50px;
+    line-height: 50px;
+    float: left; }
+    .x-menu-level .x-menu-list > li .x-menu-item-title {
+      padding: 0 16px; }
+  .x-menu-level .x-menu-list .x-submenu {
+    position: relative; }
+    .x-menu-level .x-menu-list .x-submenu > .x-menu-item-title span {
+      display: inline-block; }
+    .x-menu-level .x-menu-list .x-submenu > .x-menu-item-title .x-submenu-title {
+      padding-right: 5px; }
+    .x-menu-level .x-menu-list .x-submenu .x-submenu-box {
+      min-width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 99;
+      padding-top: 6px; }
+      .x-menu-level .x-menu-list .x-submenu .x-submenu-box ul {
+        background: #fff;
+        overflow: hidden;
+        border-radius: 2px;
+        box-sizing: border-box;
+        border: 1px solid #e2e2e2;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2); }
+      .x-menu-level .x-menu-list .x-submenu .x-submenu-box li {
+        line-height: 33px; }
+        .x-menu-level .x-menu-list .x-submenu .x-submenu-box li .x-menu-item-title {
+          white-space: nowrap; }
+          .x-menu-level .x-menu-list .x-submenu .x-submenu-box li .x-menu-item-title:hover {
+            color: #4399ff; }
+  .x-menu-level.x-menu-baise {
+    border-bottom: 1px solid #e2e2e2; }
 
-.x-menu-level.x-menu-baise {
-  border-bottom: 1px solid #e2e2e2; }
-  .x-menu-level.x-menu-baise .x-menu-active::after {
-    width: 100%;
-    height: 2px;
-    left: 0;
-    bottom: 0;
-    transform: scaleX(1); }
-
-.x-menu-vertical .x-menu-list > li {
-  line-height: 45px; }
-
-.x-menu-vertical .x-menu-list .x-meun-item {
-  padding: 0 20px; }
-
-.x-menu-vertical.x-menu-baise::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  border-right: 1px solid #e2e2e2; }
-
-.x-menu-vertical.x-menu-baise .x-menu-list > li::after {
-  top: 0;
-  right: 0;
-  width: 2px;
-  height: 100%;
-  transform: scaleY(0); }
-
-.x-menu-vertical.x-menu-baise .x-menu-list > li.x-menu-active::after {
-  transform: scaleY(1); }
-
-.x-menu-vertical .x-submenu .x-submenu-box ul > li {
-  margin-left: 14px;
-  line-height: 38px; }
-
-.x-menu-vertical .x-submenu .x-meun-item {
-  position: relative; }
-  .x-menu-vertical .x-submenu .x-meun-item .x-subment-icon {
+.x-menu-vertical .x-menu-list > li .x-menu-item-title {
+  position: relative;
+  padding: 0 16px; }
+  .x-menu-vertical .x-menu-list > li .x-menu-item-title > .x-subment-icon {
     position: absolute;
     top: 0;
-    right: 20px; }
+    right: 16px;
+    height: 100%; }
 
-.x-menu-primary {
+.x-menu-vertical .x-menu-list > li .x-submenu-box ul li {
+  padding-left: 14px; }
+
+.x-menu-vertical li .x-menu-item-title {
+  line-height: 38px;
+  opacity: 0.8;
+  transition: opacity 0.1s; }
+
+.x-menu-vertical li:hover > .x-menu-item-title {
+  opacity: 1; }
+
+.x-menu-vertical.x-menu-baise {
+  border-right: 1px solid #e2e2e2; }
+
+.x-menu.x-menu-primary {
   background: #4399ff; }
-  .x-menu-primary .x-submenu > .x-menu-item-title,
-  .x-menu-primary.x-menu-vertical .x-submenu-box ul {
-    color: #e2e2e2;
-    transition: color 0.1s; }
-  .x-menu-primary .x-submenu > .x-menu-item-title.x-menu-active,
-  .x-menu-primary .x-submenu > .x-menu-item-title:hover,
-  .x-menu-primary .x-submenu-box ul li:hover {
+  .x-menu.x-menu-primary .x-menu-list > li > .x-menu-item-title {
     color: #fff; }
-  .x-menu-primary .x-submenu > .x-menu-item-title:hover {
+  .x-menu.x-menu-primary.x-menu-level .x-menu-list > li > .x-menu-item-title {
+    transition: background-color 0.2s; }
+  .x-menu.x-menu-primary.x-menu-level .x-menu-list > li:hover > .x-menu-item-title {
     background-color: rgba(0, 0, 0, 0.1); }
-  .x-menu-primary .x-submenu > .x-menu-item-title.x-menu-active {
-    background-color: rgba(0, 0, 0, 0.2); }
-  .x-menu-primary .x-submenu.x-show-submenu > .x-menu-item-title {
+  .x-menu.x-menu-primary.x-menu-vertical .x-submenu-box li {
     color: #fff; }
+  .x-menu.x-menu-primary.x-menu-level .x-menu-list > .x-menu-active,
+  .x-menu.x-menu-primary.x-menu-vertical .x-menu-list > .x-menu-active > .x-menu-item-title {
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1; }
 
-.x-menu-success {
+.x-menu.x-menu-success {
   background: #46be8a; }
-  .x-menu-success .x-submenu > .x-menu-item-title,
-  .x-menu-success.x-menu-vertical .x-submenu-box ul {
-    color: #e2e2e2;
-    transition: color 0.1s; }
-  .x-menu-success .x-submenu > .x-menu-item-title.x-menu-active,
-  .x-menu-success .x-submenu > .x-menu-item-title:hover,
-  .x-menu-success .x-submenu-box ul li:hover {
+  .x-menu.x-menu-success .x-menu-list > li > .x-menu-item-title {
     color: #fff; }
-  .x-menu-success .x-submenu > .x-menu-item-title:hover {
+  .x-menu.x-menu-success.x-menu-level .x-menu-list > li > .x-menu-item-title {
+    transition: background-color 0.2s; }
+  .x-menu.x-menu-success.x-menu-level .x-menu-list > li:hover > .x-menu-item-title {
     background-color: rgba(0, 0, 0, 0.1); }
-  .x-menu-success .x-submenu > .x-menu-item-title.x-menu-active {
-    background-color: rgba(0, 0, 0, 0.2); }
-  .x-menu-success .x-submenu.x-show-submenu > .x-menu-item-title {
+  .x-menu.x-menu-success.x-menu-vertical .x-submenu-box li {
     color: #fff; }
+  .x-menu.x-menu-success.x-menu-level .x-menu-list > .x-menu-active,
+  .x-menu.x-menu-success.x-menu-vertical .x-menu-list > .x-menu-active > .x-menu-item-title {
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1; }
 
-.x-menu-warning {
+.x-menu.x-menu-warning {
   background: #f2a654; }
-  .x-menu-warning .x-submenu > .x-menu-item-title,
-  .x-menu-warning.x-menu-vertical .x-submenu-box ul {
-    color: #e2e2e2;
-    transition: color 0.1s; }
-  .x-menu-warning .x-submenu > .x-menu-item-title.x-menu-active,
-  .x-menu-warning .x-submenu > .x-menu-item-title:hover,
-  .x-menu-warning .x-submenu-box ul li:hover {
+  .x-menu.x-menu-warning .x-menu-list > li > .x-menu-item-title {
     color: #fff; }
-  .x-menu-warning .x-submenu > .x-menu-item-title:hover {
+  .x-menu.x-menu-warning.x-menu-level .x-menu-list > li > .x-menu-item-title {
+    transition: background-color 0.2s; }
+  .x-menu.x-menu-warning.x-menu-level .x-menu-list > li:hover > .x-menu-item-title {
     background-color: rgba(0, 0, 0, 0.1); }
-  .x-menu-warning .x-submenu > .x-menu-item-title.x-menu-active {
-    background-color: rgba(0, 0, 0, 0.2); }
-  .x-menu-warning .x-submenu.x-show-submenu > .x-menu-item-title {
+  .x-menu.x-menu-warning.x-menu-vertical .x-submenu-box li {
     color: #fff; }
+  .x-menu.x-menu-warning.x-menu-level .x-menu-list > .x-menu-active,
+  .x-menu.x-menu-warning.x-menu-vertical .x-menu-list > .x-menu-active > .x-menu-item-title {
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1; }
 
-.x-menu-danger {
+.x-menu.x-menu-danger {
   background: #f96868; }
-  .x-menu-danger .x-submenu > .x-menu-item-title,
-  .x-menu-danger.x-menu-vertical .x-submenu-box ul {
-    color: #e2e2e2;
-    transition: color 0.1s; }
-  .x-menu-danger .x-submenu > .x-menu-item-title.x-menu-active,
-  .x-menu-danger .x-submenu > .x-menu-item-title:hover,
-  .x-menu-danger .x-submenu-box ul li:hover {
+  .x-menu.x-menu-danger .x-menu-list > li > .x-menu-item-title {
     color: #fff; }
-  .x-menu-danger .x-submenu > .x-menu-item-title:hover {
+  .x-menu.x-menu-danger.x-menu-level .x-menu-list > li > .x-menu-item-title {
+    transition: background-color 0.2s; }
+  .x-menu.x-menu-danger.x-menu-level .x-menu-list > li:hover > .x-menu-item-title {
     background-color: rgba(0, 0, 0, 0.1); }
-  .x-menu-danger .x-submenu > .x-menu-item-title.x-menu-active {
-    background-color: rgba(0, 0, 0, 0.2); }
-  .x-menu-danger .x-submenu.x-show-submenu > .x-menu-item-title {
+  .x-menu.x-menu-danger.x-menu-vertical .x-submenu-box li {
     color: #fff; }
+  .x-menu.x-menu-danger.x-menu-level .x-menu-list > .x-menu-active,
+  .x-menu.x-menu-danger.x-menu-vertical .x-menu-list > .x-menu-active > .x-menu-item-title {
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1; }
 
-.x-menu-dark {
+.x-menu.x-menu-dark {
   background: #37474f; }
-  .x-menu-dark .x-submenu > .x-menu-item-title,
-  .x-menu-dark.x-menu-vertical .x-submenu-box ul {
-    color: #e2e2e2;
-    transition: color 0.1s; }
-  .x-menu-dark .x-submenu > .x-menu-item-title.x-menu-active,
-  .x-menu-dark .x-submenu > .x-menu-item-title:hover,
-  .x-menu-dark .x-submenu-box ul li:hover {
+  .x-menu.x-menu-dark .x-menu-list > li > .x-menu-item-title {
     color: #fff; }
-  .x-menu-dark .x-submenu > .x-menu-item-title:hover {
+  .x-menu.x-menu-dark.x-menu-level .x-menu-list > li > .x-menu-item-title {
+    transition: background-color 0.2s; }
+  .x-menu.x-menu-dark.x-menu-level .x-menu-list > li:hover > .x-menu-item-title {
     background-color: rgba(0, 0, 0, 0.1); }
-  .x-menu-dark .x-submenu > .x-menu-item-title.x-menu-active {
-    background-color: rgba(0, 0, 0, 0.2); }
-  .x-menu-dark .x-submenu.x-show-submenu > .x-menu-item-title {
+  .x-menu.x-menu-dark.x-menu-vertical .x-submenu-box li {
     color: #fff; }
+  .x-menu.x-menu-dark.x-menu-level .x-menu-list > .x-menu-active,
+  .x-menu.x-menu-dark.x-menu-vertical .x-menu-list > .x-menu-active > .x-menu-item-title {
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1; }
 
 /*
   * @Module: 表格
  * @Author: 小缘
  * @Date: 2017-07-30 13:09:18
  */
+/* base */
+/* 颜色 */
+/* 颜色分类 */
+/* 动画过渡 */
+/* 组件和模块 */
+/* 字体 */
+/* x-quote */
+/* 按钮 */
+/* input */
+/* x-input-group */
+/* textarea */
+/* 计数器 */
+/* checkbox和radio */
+/* 多选和单选按钮组 */
+/* 下拉选择 */
+/* 开关 */
+/* 滑块 */
+/* 表单 */
+/* 选项卡 */
+/* 折叠面板 */
+/* 徽章 */
+/* x-alert和x-notice共用 */
+/* dialog对话框 */
+/* x-dailog和x-model共用*/
+/* toastr */
+/* x-model */
+/* 侧边栏 */
+/* 导航菜单 */
+/* 表格 */
+/* 弹出层 */
+/* 分页 */
 .x-table-box {
   display: block;
   background: #fff; }
@@ -5973,6 +6039,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -6112,6 +6179,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -6261,6 +6329,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -6398,6 +6467,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -6458,6 +6528,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */
@@ -6497,6 +6568,7 @@ h6 {
 /* toastr */
 /* x-model */
 /* 侧边栏 */
+/* 导航菜单 */
 /* 表格 */
 /* 弹出层 */
 /* 分页 */

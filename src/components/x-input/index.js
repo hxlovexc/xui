@@ -1,3 +1,3 @@
 import xInput from './x-input.vue';
 
-export default xInput;
+module.exports = xInput;

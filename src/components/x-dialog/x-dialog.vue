@@ -86,7 +86,7 @@
         switch (type) {
           case 'close':
             value = this.dialogType === 'prompt' ? this.inputValue : undefined;
-            this.close(value);
+            typeof this.close === 'function' && this.close(value);
             this.hide();
             break;
           case 'confirm':
@@ -98,7 +98,7 @@
               return;
             }
             this.hide();
-            this.confirm(value);
+            typeof this.confirm === 'function' && this.confirm(value);
             break;
         }
       },
