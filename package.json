@@ -1,6 +1,6 @@
 {
   "name": "vue-xui",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "基于vuejs 2.0的ui组件，框架",
   "main": "main.js",
   "scripts": {
