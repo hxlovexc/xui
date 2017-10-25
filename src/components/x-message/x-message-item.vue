@@ -34,16 +34,16 @@
       },
       // 关闭
       close () {
+        const close = this.options.close;
         this.clearTimeout();
+        // 执行关闭回调
+        close && close();
         // 移除
         this.$parent.close(this.options.name);
       },
       clearTimeout () {
         // 组建销毁的时候重复调用
         if (this.timeout) {
-          const close = this.options.close;
-          // 执行关闭回调
-          close && close();
           clearTimeout(this.timeout);
           this.timeout = null;
         }

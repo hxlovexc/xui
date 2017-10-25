@@ -12,7 +12,8 @@ let instance = '';
 // 默认配置
 const defaultConfig = {
   top: '18px',
-  timer: 3000
+  timer: 3000,
+  showIcon: true
 };
 // 类型
 const types = ['loading', 'primary', 'success', 'warning', 'danger', 'dark'];

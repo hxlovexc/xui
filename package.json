@@ -1,8 +1,8 @@
 {
   "name": "vue-xui",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "基于vuejs 2.0的ui组件，框架",
-  "main": ".eslintrc.js",
+  "main": "main.js",
   "scripts": {
     "dev": "node build/dev-server.js",
     "style-dev": "gulp dev --gulpfile build/gulp-config.js",

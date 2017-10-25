@@ -52,7 +52,7 @@ import message from 'components/x-message/x-message.js';
 // import clickoutside from 'directives/click-outside';
 import tooltip from 'directives/x-tooltip/x-tooltip.js';
 
-// 组建集合
+// 组件集合
 let xui = {
   xQuote,
   xButton,

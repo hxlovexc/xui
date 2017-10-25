@@ -4,7 +4,7 @@
       <xMessageItem
         v-for="item in items"
         :key="item.name"
-        :icon="item.type && icons[item.type]"
+        :icon="item.showIcon ? (item.type && icons[item.type]) : ''"
         :options="item"
       ></xMessageItem>
     </ul>

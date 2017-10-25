@@ -20,13 +20,10 @@
         default: ''
       }
     },
-    data () {
-      return {};
-    },
     methods: {
       menuClick () {
         if (this.isSub) {
-          this.parent.selected(this.name);
+          this.parent.selected(this.$parent.name);
           this.$parent.selected(this.name);
         } else {
           this.parent.selected(this.name);
