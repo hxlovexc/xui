@@ -9,6 +9,10 @@
     <h4>类型</h4>
     <div class="row types">
       <x-button
+        @click="notice('')"
+      >default</x-button>
+      <x-button
+        v-if="item !== 'primary'"
         v-for="item in $types"
         :key="item"
         :type="item"
@@ -20,6 +24,10 @@
     <h4>带标题</h4>
     <div class="row types">
       <x-button
+        @click="notice('', 'hello 我是标题')"
+      >default</x-button>
+      <x-button
+        v-if="item !== 'primary'"
         v-for="item in $types"
         :key="item"
         :type="item"
@@ -31,6 +39,10 @@
     <h4>不带关闭按钮</h4>
     <div class="row types">
       <x-button
+        @click="notice('', 'hello 我是标题', false)"
+      >default</x-button>
+      <x-button
+        v-if="item !== 'primary'"
         v-for="item in $types"
         :key="item"
         :type="item"
@@ -42,6 +54,10 @@
     <h4>不自动关闭</h4>
     <div class="row types">
       <x-button
+        @click="notice('', '', true, 0)"
+      >default</x-button>
+      <x-button
+        v-if="item !== 'primary'"
         v-for="item in $types"
         :key="item"
         :type="item"
@@ -69,7 +85,7 @@
     },
     methods: {
       notice (type, title, closeButton = true, timer = 6000) {
-        let name = type === 'primary' ? this.$notice : this.$notice[type];
+        let name = !type ? this.$notice : this.$notice[type];
         name(`hello我是notice`, {
           timer: timer,
           title: title,

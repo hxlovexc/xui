@@ -23,7 +23,7 @@ const defaultConfig = {
 // 类型
 const types = ['success', 'warning', 'danger', 'dark'];
 // 临时存放type
-let type = 'primary';
+let type = '';
 
 // 初始化
 function initInstance () {
@@ -86,6 +86,7 @@ function initNotice (message, options = {}, clickBack, close) {
 }
 
 function Notice () {
+  type = 'primary';
   return initNotice.apply(this, arguments);
 }
 
