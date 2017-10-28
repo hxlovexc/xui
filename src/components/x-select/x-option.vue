@@ -70,7 +70,10 @@
       this.index = options.indexOf(this);
       this.PARENT.filterOptionsLength++;
       // 默认选中
-      this.selected && this.PARENT.optionsChange(this.index);
+      if (this.selected || this.value === this.PARENT.value) {
+        this.PARENT.optionsChange(this.index);
+        this.PARENT.selectLabel();
+      }
     }
   };
 </script>

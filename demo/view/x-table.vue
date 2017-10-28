@@ -64,17 +64,17 @@
           <template slot="head">
             <i class="x-icon-person"></i>性别
           </template>
-          <template slot-scope="sex">
+          <template scope="sex">
             <x-tag>{{sex ? '男' : '女'}}</x-tag>
           </template>
         </x-table-column>
         <x-table-column label="状态">
-          <template slot-scope="data">
-             <x-button
+          <template scope="data">
+            <x-button
               size="mini"
               :type="data.row.state ? 'primary' : 'danger'"
               @click="data.row.state = !data.row.state"
-            >{{data.row.state ? '显示' : '隐藏'}}</x-button> 
+            >{{data.row.state ? '显示' : '隐藏'}}</x-button>
           </template>
         </x-table-column>
       </x-table>
@@ -91,7 +91,6 @@
       </x-table>
       </br>
       </br>
-      <!--添加数据-->
       <x-button @click="addData">添加数据</x-button>
     </x-quote>
 
