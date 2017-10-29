@@ -61,7 +61,8 @@
         if (PARENT.multiple) {
           return PARENT.value.indexOf(this.value) > -1;
         }
-        return PARENT.value === this.value;
+        /* eslint-disable eqeqeq */
+        return PARENT.value == this.value;
       }
     },
     created () {
@@ -70,7 +71,8 @@
       this.index = options.indexOf(this);
       this.PARENT.filterOptionsLength++;
       // 默认选中
-      if (this.selected || this.value === this.PARENT.value) {
+      /* eslint-disable eqeqeq */
+      if (this.selected || this.value == this.PARENT.value) {
         this.PARENT.optionsChange(this.index);
         this.PARENT.selectLabel();
       }

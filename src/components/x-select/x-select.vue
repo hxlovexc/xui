@@ -222,7 +222,8 @@
         let label;
         for (let index = 0; index < this.options.length; index++) {
           const item = this.options[index];
-          if (item.value === value) {
+          /* eslint-disable eqeqeq */
+          if (item.value == value) {
             label = item.label;
             // 单选模式跳出循环-避免无用的遍历
             if (!this.multiple) {
