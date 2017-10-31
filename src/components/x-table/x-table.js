@@ -93,6 +93,7 @@ export default {
   //   }
   // },
   render (h) {
+    if (this.data.length === 0) return null;
     let fixedHead = this.height ? (
       <div
         class="x-table-header"
