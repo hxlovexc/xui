@@ -51,6 +51,7 @@ import message from 'components/x-message/x-message.js';
 // 指令
 // import clickoutside from 'directives/click-outside';
 import tooltip from 'directives/x-tooltip/x-tooltip.js';
+import loading from 'directives/x-loading/x-loading.js';
 
 // 组件集合
 let xui = {
@@ -105,7 +106,8 @@ const methods = {
 const directives = {
   // 点击非指定对象执行回调
   // clickoutside,
-  tooltip
+  tooltip,
+  loading
 };
 
 function install (Vue) {

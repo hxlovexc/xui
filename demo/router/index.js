@@ -185,6 +185,12 @@ let routes = [
     component (resolve) {
       require(['../view/x-message.vue'], resolve);
     }
+  },
+  {
+    path: '/x-loading',
+    component (resolve) {
+      require(['../view/x-loading.vue'], resolve);
+    }
   }
 ];
 

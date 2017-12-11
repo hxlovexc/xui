@@ -4,7 +4,7 @@ import router from './router';
 import xui from '../src/main';
 import './static/demo.scss';
 import 'es6-promise/auto';
-import '../dist/css/xui.css';
+import './static/css/xui.css';
 
 Vue.use(xui);
 
