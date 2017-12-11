@@ -148,18 +148,18 @@
           // 合并到临时数组 - 用于 x-options的selected
           this.adHoc = this.adHoc.concat(value);
           if (isChange) {
-            this.$emit('input', this.adHoc);
             this.$emit('change', this.adHoc);
           }
+          this.$emit('input', this.adHoc);
         } else {
           const value = data.value;
           if (isChange) {
             this.hideOptions();
             // 避免不必要的emit
             if (this.value === value) return;
-            this.$emit('input', value);
             this.$emit('change', value);
           }
+          this.$emit('input', value);
         }
         this.curIndex = index;
       },

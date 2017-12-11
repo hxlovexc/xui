@@ -1,5 +1,5 @@
 <template>
-  <transition name="fade">
+  <transition name="x-loading-fade">
     <div v-show="show" class="x-loading-mask">
       <div :class="['x-loading', `x-loading-${type}`]">
         <div v-if="icon" class="x-loading-custom-icon">
@@ -104,13 +104,13 @@
   }
 
   // 显示隐藏动画
-  .fade-enter-active,
-  .fade-leave-active {
+  .x-loading-fade-enter-active,
+  .x-loading-fade-leave-active {
     transition: opacity 0.5s !important;
   }
 
-  .fade-enter,
-  .fade-leave-to {
+  .x-loading-fade-enter,
+  .x-loading-fade-leave-to {
     opacity: 0;
   }
 
@@ -134,7 +134,7 @@
       -webkit-transform: rotate(0);
       transform: rotate(0)
     }
-    
+
     100% {
       -webkit-transform: rotate(360deg);
       transform: rotate(360deg)
